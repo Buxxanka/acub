@@ -23,13 +23,16 @@
     <main>
         {% block content %}
         <!-- Содержимое страницы -->
+        <div id="vue-app"></div>
         {% endblock %}
     </main>
-
+    
     <footer>
         <p>&copy; {{ now|date:"Y" }} ACUM. Все права защищены.</p>
     </footer>
 
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'frontend/js/app.js' %}"></script>
+    {% block scripts %}{% endblock %}
 </body>
 </html> 
