@@ -1,0 +1,47 @@
+@use '../variables' as variables;
+@use '../mixins' as mixins;
+
+.pricing {
+	padding: 70px 45px;
+	background: variables.$color-white;
+	margin-top: 50px;
+
+	@media (max-width: variables.$screen-sm-min) {
+		margin-top: 0;
+	}
+
+	&.pricing-active {
+		padding-top: 110px;
+		padding-bottom: 110px;
+		margin-top: 10px;
+
+		@media (max-width: variables.$screen-sm-min) {
+			margin-top: 0;
+		}
+	}
+
+	.pricing {
+		&-icon {
+			display: block;
+			@include mixins.font($size: 30px);
+			color: variables.$color-link-hover;
+			margin-bottom: 30px;
+		}
+
+		&-list-item {
+			@include mixins.position(relative);
+			@include mixins.font($size: 13px);
+			color: variables.$color-link;
+			padding-left: 20px;
+			margin-bottom: 10px;
+
+			&:before {
+				@include mixins.position(absolute, $top: 7px, $left: 0);
+				@include mixins.size(9px, 2px);
+		        background: variables.$color-base;
+		        content: " ";
+		        margin-right: 10px;
+			}
+		}
+	}
+}

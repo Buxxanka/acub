@@ -1,0 +1,40 @@
+@use '../variables' as variables;
+@use '../mixins' as mixins;
+
+.promo-section {
+	@media (max-width: variables.$screen-sm-max) {
+		.promo-section-col {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+
+	@media (min-width: variables.$screen-md-min) {
+		@include mixins.position(relative);
+		height: variables.$ver-center-block-height;
+		
+		.promo-section {
+			&-col {
+				width: 45%;
+			}
+
+			&-img-left {
+				@include mixins.position(absolute, $top: 0, $right: 50%);
+			}
+
+			&-img-right {
+				@include mixins.position(absolute, $top: 0, $left: 50%);
+			}
+		}
+		
+		.ver-center {
+			display: table;
+			height: variables.$ver-center-block-height;
+			
+			&-aligned {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+	}
+}

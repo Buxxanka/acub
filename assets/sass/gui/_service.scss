@@ -1,0 +1,33 @@
+@use '../variables' as variables;
+@use '../mixins' as mixins;
+
+.service {
+	background: variables.$color-white;
+	padding: 50px;
+
+	.service-element,
+	.service-info {
+		@include mixins.translate3d(0,0,0);
+		@include mixins.cubic-transition($delay: 0, $duration: 300ms, $property: (all));
+	}
+
+	.service-icon {
+		display: block;
+		@include mixins.font($size: 30px);
+		color: variables.$color-link-hover;
+		margin-bottom: 30px;
+	}
+
+	&:hover {
+		.service-element {
+			opacity: 0;
+			@include mixins.translate3d(0,-100%,0);
+			@include mixins.cubic-transition($delay: 0, $duration: 300ms, $property: (all));
+		}
+
+		.service-info {
+			@include mixins.translate3d(0,-30%,0);
+			@include mixins.cubic-transition($delay: 0, $duration: 300ms, $property: (all));
+		}
+	}
+}

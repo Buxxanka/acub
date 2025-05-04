@@ -1,103 +1,112 @@
 'use strict';
- 
-var gulp 		= require('gulp'),
-	sass 		= require('gulp-sass'),
-	changed 	= require('gulp-changed'),
-	cleanCSS 	= require('gulp-clean-css'),
-	rtlcss 		= require('gulp-rtlcss'),
-	rename 		= require('gulp-rename'),
-	uglify 		= require('gulp-uglify'),
-	pump 		= require('pump'),
-	htmlhint  	= require('gulp-htmlhint');
 
+const gulp       = require('gulp');
+const sass       = require('gulp-sass')(require('sass'));
+const changed    = require('gulp-changed').default || require('gulp-changed');
+const cleanCSS   = require('gulp-clean-css');
+const rtlcss     = require('gulp-rtlcss');
+const rename     = require('gulp-rename');
+const uglify     = require('gulp-uglify');
+const pump       = require('pump');
+const htmlhint   = require('gulp-htmlhint');
 
-// Gulp plumber error handler
-function errorLog(error) {
-	console.error.bind(error);
-	this.emit('end');
+/**
+ * Компиляция SASS в CSS.
+ */
+function sassTask() {
+  return gulp.src('assets/sass/**/*.scss')
+    .pipe(changed('static/css/'))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(gulp.dest('static/css/'));
 }
 
+/**
+ * Минификация CSS.
+ * Первая часть – минификация основного стиля,
+ * вторая – минимизация RTL-версии.
+ */
+function minifyCssTask() {
+  // Минифицируем основной файл layout.css
+  gulp.src(['static/css/layout.css', '!static/css/layout.min.css'])
+    .pipe(cleanCSS({ debug: true }, details => {
+      console.log(details.name + ': ' + details.stats.originalSize);
+      console.log(details.name + ': ' + details.stats.minifiedSize);
+    }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('static/css/'));
 
-// --------------------------------------------------
-// [Libraries]
-// --------------------------------------------------
+  // Минифицируем RTL-версию, возвращаем поток для корректного завершения задачи
+  return gulp.src(['static/css/layout-rtl.css', '!static/css/layout-rtl.min.css'])
+    .pipe(cleanCSS({ debug: true }, details => {
+      console.log(details.name + ': ' + details.stats.originalSize);
+      console.log(details.name + ': ' + details.stats.minifiedSize);
+    }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('static/css/'));
+}
 
-// Sass - Compile Sass files into CSS
-gulp.task('sass', function () {
-	gulp.src('../HTML/sass/**/*.scss')
-		.pipe(changed('../HTML/css/'))
-		.pipe(sass({ outputStyle: 'expanded' }))
-		.on('error', sass.logError)
-		.pipe(gulp.dest('../HTML/css/'));
-});
+/**
+ * Конвертация LTR CSS в RTL.
+ */
+function rtlCssTask() {
+  return gulp.src([
+      'static/css/layout.css', 
+      '!static/css/layout.min.css', 
+      '!static/css/layout-rtl.css', 
+      '!static/css/layout-rtl.min.css'
+    ])
+    .pipe(changed('static/css/'))
+    .pipe(rtlcss())
+    .pipe(rename({ suffix: '-rtl' }))
+    .pipe(gulp.dest('static/css/'));
+}
 
+/**
+ * Минификация JavaScript.
+ */
+function uglifyTask(cb) {
+  pump([
+    gulp.src(['static/js/**/*.js', '!static/js/**/*.min.js']),
+    uglify(),
+    rename({ suffix: '.min' }),
+    gulp.dest('static/js/')
+  ], cb);
+}
 
-// Minify CSS
-gulp.task('minify-css', function() {
-	// Theme
-    gulp.src(['../HTML/css/layout.css', '!../HTML/css/layout.min.css'])
-        .pipe(cleanCSS({debug: true}, function(details) {
-            console.log(details.name + ': ' + details.stats.originalSize);
-            console.log(details.name + ': ' + details.stats.minifiedSize);
-        }))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('../HTML/css/'));
+/**
+ * Валидация HTML с помощью htmlhint.
+ */
+function htmlHintTask() {
+  return gulp.src('shop/templates/**/*.html')
+    .pipe(htmlhint('.htmlhintrc'))
+    .pipe(htmlhint.reporter())
+    .pipe(htmlhint.failReporter({ suppress: true }));
+}
 
-    // RTL
-    gulp.src(['../HTML/css/layout-rtl.css', '!../HTML/css/layout-rtl.min.css'])
-        .pipe(cleanCSS({debug: true}, function(details) {
-            console.log(details.name + ': ' + details.stats.originalSize);
-            console.log(details.name + ': ' + details.stats.minifiedSize);
-        }))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('../HTML/css/'));
-});
+/**
+ * Наблюдение за изменениями файлов.
+ */
+function watchTask() {
+  gulp.watch('assets/sass/**/*.scss', sassTask);
+  gulp.watch('static/css/layout.css', gulp.series(minifyCssTask, rtlCssTask));
+  gulp.watch('static/js/**/*.js', uglifyTask);
+  gulp.watch('templates/**/*.html', htmlHintTask);
+}
 
+// Экспортируем задачи для CLI
+exports.sass = sassTask;
+exports.minifyCss = minifyCssTask;
+exports.rtlcss = rtlCssTask;
+exports.uglify = uglifyTask;
+exports.htmlhint = htmlHintTask;
+exports.watch = watchTask;
 
-// RTL CSS - Convert LTR CSS to RTL.
-gulp.task('rtlcss', function () {
-	gulp.src(['../HTML/css/layout.css', '!../HTML/css/layout.min.css', '!../HTML/css/layout-rtl.css', '!../HTML/css/layout-rtl.min.css'])
-	.pipe(changed('../HTML/css/'))
-		.pipe(rtlcss())
-		.pipe(rename({ suffix: '-rtl' }))
-		.pipe(gulp.dest('../HTML/css/'));
-});
-
-
-// Minify JS - Minifies JS
-gulp.task('uglify', function (cb) {
-  	pump([
-	        gulp.src(['../HTML/js/**/*.js', '!../HTML/js/**/*.min.js']),
-	        uglify(),
-			rename({ suffix: '.min' }),
-	        gulp.dest('../HTML/js/')
-		],
-		cb
-	);
-});
-
-
-// Htmlhint - Validate HTML
-gulp.task('htmlhint', function() {
-	gulp.src('../HTML/*.html')
-		.pipe(htmlhint())
-		.pipe(htmlhint.reporter())
-	  	.pipe(htmlhint.failReporter({ suppress: true }))
-});
-
-
-// --------------------------------------------------
-// [Gulp Task - Watch]
-// --------------------------------------------------
-
-// Lets us type "gulp" on the command line and run all of our tasks
-gulp.task('default', ['sass', 'minify-css', 'rtlcss', 'uglify', 'htmlhint', 'watch']);
-
-// This handles watching and running tasks
-gulp.task('watch', function () {
-    gulp.watch('../HTML/sass/**/*.scss', ['sass']);
-    gulp.watch('../HTML/css/layout.css', ['minify-css']);
-    gulp.watch('../HTML/css/layout.css', ['rtlcss']);
-    gulp.watch('../HTML/js/**/*.js', ['uglify']);
-    gulp.watch('../HTML/*.html', ['htmlhint']);
-});
+// Задача по умолчанию, которая запускает все задачи параллельно
+exports.default = gulp.parallel(
+  sassTask,
+  minifyCssTask,
+  rtlCssTask,
+  uglifyTask,
+  htmlHintTask,
+  watchTask
+);
