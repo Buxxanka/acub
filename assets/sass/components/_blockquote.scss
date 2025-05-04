@@ -1,0 +1,20 @@
+@use '../variables' as variables;
+@use '../mixins' as mixins;
+
+
+.blockquote {
+	position: relative;
+	@include mixins.font($size: 17px, $weight: 400, $family: variables.$font-family-base);
+	color: variables.$color-subtitle;
+    line-height: 1.4;
+	border-left: none;
+	margin-left: 20px;
+
+	&:before {
+		@include mixins.position(absolute, $top: 0, $left: -20px);
+		@include mixins.font($size: 60px);
+		display: inline-block;
+		color: variables.$color-base;
+		content: '“';
+	}
+}

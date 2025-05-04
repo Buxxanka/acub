@@ -1,0 +1,61 @@
+@use '../variables' as variables;
+@use '../mixins' as mixins;
+
+.form-control {
+	height: 50px;
+    @include mixins.font($size: 14px, $weight: 400);
+    color: variables.$color-subtitle;
+    @include mixins.placeholder(variables.$color-subtitle);
+    background: variables.$color-sky-light;
+    border: none;
+    box-shadow: none;
+    @include mixins.border-radius(0);
+    padding-left: 15px;
+
+    &:focus {
+    	color: variables.$color-heading;
+        @include mixins.placeholder(variables.$color-heading);
+        box-shadow: none;
+    }
+}
+
+
+/*------------------------------------------------------------------
+    [Full Screen Carousel]
+------------------------------------------------------------------*/
+
+.full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*------------------------------------------------------------------
+    [Carousel]
+------------------------------------------------------------------*/
+
+.carousel-indicators {
+    left: auto;
+    width: auto;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.carousel-centered {
+    @include mixins.position(absolute, $top: 50%);
+    @include mixins.translate3d(0,-50%,0);
+}
+
+.carousel-title {
+    @include mixins.font($size: 80px, $weight: 700);
+    color: variables.$color-white;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+@media (max-width: variables.$screen-sm-min) {
+    .carousel-title {
+        @include mixins.font($size: 60px);
+    }    
+}

@@ -1,0 +1,27 @@
+@use '../variables' as variables;
+@use '../mixins' as mixins;
+
+/*------------------------------------------------------------------
+  	[Text Colors]
+------------------------------------------------------------------*/
+
+.color-base { color: variables.$color-base; }
+.color-white { color: variables.$color-white; }
+.color-heading { color: variables.$color-heading; }
+.color-subtitle { color: variables.$color-subtitle; }
+.color-link { color: variables.$color-link; }
+.color-link-hover { color: variables.$color-link-hover; }
+.color-sky-light { color: variables.$color-sky-light; }
+
+
+/*------------------------------------------------------------------
+  	[Background Colors]
+------------------------------------------------------------------*/
+
+.bg-color-base { background: variables.$color-base; }
+.bg-color-white { background: variables.$color-white; }
+.bg-color-heading { background: variables.$color-heading; }
+.bg-color-subtitle { background: variables.$color-subtitle; }
+.bg-color-link { background: variables.$color-link; }
+.bg-color-link-hover { background: variables.$color-link-hover; }
+.bg-color-sky-light { background: variables.$color-sky-light; }

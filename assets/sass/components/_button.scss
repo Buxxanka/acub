@@ -1,0 +1,22 @@
+@use '../mixins' as mixins;
+@use '../variables' as variables;
+
+.btn-theme {
+	@include mixins.button();
+}
+
+.btn-white-brd {
+	@include mixins.button-color(variables.$color-white, variables.$color-heading, transparent, variables.$color-white, 1px, rgba(255,255,255,.3), transparent);
+}
+
+.btn-default-bg {
+	@include mixins.button-color(variables.$color-heading, variables.$color-white, #f3f4f5, variables.$color-base, 0, transparent, transparent);
+}
+
+.btn-base-bg {
+	@include mixins.button-color(variables.$color-white, variables.$color-white, variables.$color-base, #63cbd7, 0, transparent, transparent);
+}
+
+.btn-theme-sm {
+	@include mixins.button-size(13px, 600, 15px 30px);
+}

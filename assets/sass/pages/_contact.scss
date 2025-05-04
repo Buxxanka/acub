@@ -1,0 +1,10 @@
+@use '../variables' as variables;
+@use '../mixins' as mixins;
+
+.contact-list {
+	> li {
+		@include mixins.font($size: 13px);
+		color: variables.$color-link;
+		margin-bottom: 10px;
+	}
+}

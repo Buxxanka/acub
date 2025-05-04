@@ -1,0 +1,22 @@
+@use '../variables' as variables;
+@use '../mixins' as mixins;
+
+.swiper-slider {
+	@include mixins.position(relative);
+	@include mixins.size(100%);
+	overflow: hidden;
+}
+
+.swiper-clients-img {
+	display: block;
+	@include mixins.size(190px, auto);
+	margin: 0 auto;
+	opacity: 1;
+	cursor: pointer;
+	@include mixins.cubic-transition($delay: 0, $duration: 200ms, $property: (all));
+
+	&:hover {
+		opacity: .8;
+		@include mixins.cubic-transition($delay: 0, $duration: 200ms, $property: (all));
+	}
+}
