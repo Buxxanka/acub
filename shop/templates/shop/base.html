@@ -4,35 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <title> {% block title %}{{ page_title }}{% endblock %} | ACUB </title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="">ACUB </a></li>
-                <li><a href="{% url 'home' %}">Главная</a></li>
-                <li><a href="{% url 'about' %}">О компании</a></li>
-                <li><a href="{% url 'services' %}">Услуги</a></li>
-                <li><a href="{% url 'contacts' %}">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        {% block content %}
-        <!-- Содержимое страницы -->
-        <div id="vue-app"></div>
-        {% endblock %}
-    </main>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/simple-line-icons/simple-line-icons.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/css/swiper.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/layout.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'css/layout.css' %}" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}"/>
     
-    <footer>
-        <p>&copy; {{ now|date:"Y" }} ACUM. Все права защищены.</p>
-    </footer>
+    
+    {% include "shop/partials/header.html" %}
 
-    <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'frontend/js/app.js' %}"></script>
-    {% block scripts %}{% endblock %}
+    {% block content %}
+    {% endblock %}
+
+    {% include "shop/partials/footer.html" %}
+
+    <!-- Back To Top -->
+    <a href="javascript:void(0);" class="js-back-to-top back-to-top">В</a>
+    <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+
+    <!-- CORE PLUGINS -->
+    <script src="{% static 'vendor/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/jquery-migrate.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script> 
+
+    <!-- PAGE LEVEL PLUGINS -->
+    <script src="{% static 'vendor/jquery.easing.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/jquery.back-to-top.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/jquery.smooth-scroll.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/jquery.wow.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/jquery.parallax.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/swiper/js/swiper.jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/masonry/jquery.masonry.pkgd.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'vendor/masonry/imagesloaded.pkgd.min.js' %}" type="text/javascript"></script>   
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <script src="{% static 'js/layout.min.js'%}" type="text/javascript"></script>
+    <script src="{% static 'js/components/wow.min.js'%}" type="text/javascript"></script>
+    <script src="{% static 'js/components/swiper.min.js'%}" type="text/javascript"></script>
+    <script src="{% static 'js/components/masonry.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/components/gmap.min.js' %}" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U&amp;callback=initMap" async defer></script>
+
+    {% block scripts %}{% endblock %}  
 </body>
 </html> 

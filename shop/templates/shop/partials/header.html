@@ -1,0 +1,45 @@
+{% load static %}
+
+<header class="header navbar-fixed-top">
+<!-- Navbar -->
+<nav class="navbar" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="menu-container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="toggle-icon"></span>
+            </button>
+
+            <!-- Logo -->
+            <div class="logo">
+                <a class="logo-wrap" href="{% url 'home' %}">
+                  <span class="logo-text">ACUB</span>
+                  <!-- <span class="logo-divider">|</span>
+                  <span class="logo-description">
+                    <span class="desc-line">Официальный дистрибьютор Evolis</span>
+                    <span class="desc-line">В Узбекистане</span>
+                  </span> -->
+                </a>
+              </div>
+            <!-- End Logo -->
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse nav-collapse">
+            <div class="menu-container">
+                <ul class="navbar-nav navbar-nav-right">
+                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Главная</a></li>
+                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'pricing' %}active{% endif %}" href="{% url 'pricing' %}">Рынки и предложение</a></li>
+                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'products' %}active{% endif %}" href="{% url 'products' %}">Наши решения</a></li>
+                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">О нас</a></li>
+                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'contacts' %}active{% endif %}" href="{% url 'contacts' %}">Контакты</a></li>
+                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'faq' %}active{% endif %}" href="{% url 'faq' %}">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Navbar Collapse -->
+    </div>
+</nav>
+<!-- Navbar -->
+</header>
