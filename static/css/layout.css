@@ -3,6 +3,8 @@
 /* eg: @include rotate(45deg); */
 /* eg: @include translate3d(0,0,0); */
 /* eg: @include border-radius(3px); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 html {
   overflow-x: hidden;
 }
@@ -12,7 +14,7 @@ html, html a, body {
 }
 
 body {
-  font-family: Hind, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 p {
@@ -42,80 +44,6 @@ a:focus, a:hover, a:active {
   outline: 0;
   color: #999caa;
   text-decoration: none;
-}
-
-
-
-
-/* Контейнер логотипа */
-.logo {
-  /* Если необходимо, задайте отступ сверху, чтобы «спустить» логотип немного вниз */
-  /* margin-top: 20px; */
-}
-
-/* Ссылка-обертка логотипа, выровненная по центру по вертикали */
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-/* Текст логотипа ACUB */
-.logo-text {
-  font-family: 'Montserrat', sans-serif; /* Подключите шрифт Montserrat через Google Fonts */
-  font-size: 48px;             /* Увеличенный размер */
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #17bed2;                 /* Начальный цвет */
-  transition: color 0.3s ease, transform 0.3s ease; /* Плавное изменение цвета и сдвига */
-  margin-right: 10px;
-}
-
-/* Эффект при наведении на текст логотипа */
-.logo-text:hover {
-  color: #19e4fc;              /* Новый цвет при наведении, можно изменить на нужный */
-  transform: translateX(5px);  /* Легкий сдвиг вправо, создающий эффект «выдвижения» */
-}
-
-/* Разделитель */
-.logo-divider {
-  font-size: 48px; 
-  font-weight: 700;
-  color: #333;
-  margin: 0 10px;
-  line-height: 1;     /* Крайне важное, чтобы разделитель совпадал по высоте с текстом */
-}
-
-/* Описание логотипа */
-.logo-description {
-  display: flex;
-  flex-direction: column;      /* Две строки – одна под другой */
-  justify-content: center;     /* Выровнять по вертикали по всей высоте логотипа */
-  font-family: 'Roboto', sans-serif; /* Дополнительный шрифт для описания */
-  font-size: 18px;             /* Размер шрифта для описания */
-  color: #555;                 /* Цвет описания */
-  line-height: 1.2;
-}
-
-/* Если требуется дополнительные адаптивные правки – можно добавить медиазапросы */
-@media (max-width: 768px) {
-  .logo-text {
-    font-size: 36px;
-  }
-  .logo-divider {
-    font-size: 36px;
-  }
-  .logo-description {
-    font-size: 16px;
-  }
-}
-
-
-/* Пример адаптивности */
-@media (max-width: 768px) {
-  .logo-text {
-    font-size: 36px;
-  }
 }
 
 
@@ -926,12 +854,14 @@ h4 {
 }
 
 .carousel-title {
-  font-size: 80px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
   font-weight: 700;
   color: #fff;
   line-height: 1.1;
   text-transform: uppercase;
 }
+
 
 @media (max-width: 768px) {
   .carousel-title {

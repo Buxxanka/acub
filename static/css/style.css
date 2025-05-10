@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+.carousel-title h1,
+.carousel-title h2 {
+  white-space: normal; /* если заголовок состоит из нескольких слов */
+}
+
+.carousel-inner p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #fff;
+  white-space: normal; /* чтобы текст мог переноситься */
+}
+
+/* Контейнер квадратов — располагаем их абсолютным позиционированием внутри слайда */
+/* Контейнер для квадратов – располагается вертикально по вашим настройкам */
+.slider-squares {
+  position: absolute;
+  top: 160px;              /* Отступ сверху – корректируйте по макету */
+  left: 740px;             /* Отступ слева */
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  z-index: 10;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+
+/* Общие стили для ссылок в контейнере (вертикальное расположение по умолчанию) */
+.slider-squares a {
+  display: flex;
+  flex-direction: column; /* Элементы размещаются один под другим */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  border: 0.5px solid rgba(255,255,255,0.27);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* Стили для первого квадрата */
+.square {
+  width: 330px;
+  height: 120px;   /* При необходимости можно увеличить высоту, если текста много */
+  padding: 10px;
+}
+
+/* Модификаторы для разных типов квадратов (если применимо) */
+.square-target   { height: 170px !important; }
+.square-chill    { height: 180px !important; }
+.square-medical  { height: 165px !important; }
+.square-school   { height: 150px !important; }
+.square-build    { height: 160px !important; }
+.square-car      { height: 140px; }
+
+/* Стили для квадратного элемента с номером */
+.square-number {
+  width: 330px;
+  height: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square-number span {
+  color: #fff;
+}
+
+/* --- Новый блок: Верхняя часть с заголовком и иконкой --- */
+.square-top {
+  display: flex;
+  flex-direction: row;       /* Заголовок и иконка идут в ряд */
+  align-items: center;        /* Выравнивание по базовой линии */
+  justify-content: flex-start;/* Выравнивание по левому краю */
+  gap: 10px;                /* Пространство между заголовком и иконкой */
+  width: 100%;
+  text-align: left; 
+  margin-bottom: 5px;       /* Отступ между верхней частью и описанием */
+}
+
+/* Заголовок */
+.square-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Иконка в верхней части */
+.square-top i {
+  font-size: 30px;
+  color: #ffffff;
+  margin: 0 5px 0 5px;
+}
+
+.icon-hotel{
+  font-size: 38px !important;
+  margin-right: 5px !important;
+}
+
+/* --- Блок с описанием (находится ниже) --- */
+.square-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #ffffff;
+  white-space: normal;
+  text-align: left;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Hover-эффект для квадратов */
+.square:hover,
+.square-number:hover {
+  background-color: #ffffff;
+  transform: scale(1.02);
+}
+.square:hover i,
+.square:hover .square-title,
+.square:hover .square-desc,
+.square-number:hover span {
+  color: rgb(80, 80, 80);
+}
+
+
+
+
+
+/* Контейнер логотипа */
+.logo {
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 5px;
+  }
+
+  
+  /* Ссылка-обертка логотипа — используем inline-flex для более «плотного» обтекания,
+     отключаем перенос и убираем лишние пробелы */
+  .logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    text-decoration: none; /* исправлено с неверного nowrap */
+    gap: 10px;
+    /* Убираем фиксированную минимальную ширину, которая могла бы приводить к нежелательному перепаду */
+    /* min-width: 300px; */
+  }
+  
+  .logo-icon{
+    height: auto;
+    width: 60px;
+    margin-bottom: 25px;
+    margin-right: 10px;
+  }
+  
+  /* Текст логотипа ACUB */
+  .logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #17bed2;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 10px 0 0; /* отступ справа */
+    padding: 0;
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0 5px 0 -5px;
+    padding: 0;
+  }
+  
+  /* Эффект при наведении на текст логотипа */
+  .logo-text:hover {
+    color: #19e4fc;
+    transform: translateY(5px);
+  }
+  
+  
+  .desc-line{
+    color: rgb(218, 218, 218);
+  }
+  
+  .header.scrolled .desc-line {
+    color: rgb(81, 81, 81);
+  }
+  
+  /* Адаптивное изменение для экранов до 768px */
+  @media (max-width: 768px) {
+    .logo-text {
+      font-size: 36px;
+      margin: 0 4px 0 -4px;
+    }
+    .logo-divider {
+      font-size: 36px;
+      margin: 0 2px;
+      transform: scaleX(0.5);
+    }
+    .logo-description {
+      font-size: 14px;
+      margin-top: -4px;
+    }
+  }
+  
+  
+  

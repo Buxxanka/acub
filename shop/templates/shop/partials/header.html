@@ -13,13 +13,9 @@
 
             <!-- Logo -->
             <div class="logo">
+                <img src="{% static 'img/ACUBE.png' %}" alt="Логотип" class="logo-icon logo-acube">
                 <a class="logo-wrap" href="{% url 'home' %}">
-                  <span class="logo-text">ACUB</span>
-                  <!-- <span class="logo-divider">|</span>
-                  <span class="logo-description">
-                    <span class="desc-line">Официальный дистрибьютор Evolis</span>
-                    <span class="desc-line">В Узбекистане</span>
-                  </span> -->
+                  <span class="logo-text">ACUBE</span>
                 </a>
               </div>
             <!-- End Logo -->
@@ -29,12 +25,9 @@
         <div class="collapse navbar-collapse nav-collapse">
             <div class="menu-container">
                 <ul class="navbar-nav navbar-nav-right">
-                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Главная</a></li>
                     <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'pricing' %}active{% endif %}" href="{% url 'pricing' %}">Рынки и предложение</a></li>
                     <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'products' %}active{% endif %}" href="{% url 'products' %}">Наши решения</a></li>
-                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">О нас</a></li>
-                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'contacts' %}active{% endif %}" href="{% url 'contacts' %}">Контакты</a></li>
-                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'faq' %}active{% endif %}" href="{% url 'faq' %}">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-item-child nav-item-hover {% if request.resolver_match.url_name == 'about' %}active{% endif %}" href="{% url 'about' %}">О Компании</a></li>
                 </ul>
             </div>
         </div>
@@ -43,3 +36,5 @@
 </nav>
 <!-- Navbar -->
 </header>
+
+  
