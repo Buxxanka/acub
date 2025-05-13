@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-  --link-color: #1598a6;
-  --link-color-hover: #1598a692;
+  --link-color: #00bed7;
+  --link-color-hover: #0099ad;
 }
 
 .carousel-title h1,
@@ -198,6 +198,11 @@
     color: rgb(81, 81, 81);
   }
   
+  .text-uppercase{
+    color: #ffffff !important;
+    margin-left: 0px !important;
+  }
+
   /* Адаптивное изменение для экранов до 768px */
   @media (max-width: 768px) {
     .logo-text {
@@ -234,12 +239,15 @@
   min-height: 500px;
   /* padding: 20px; */
   margin-bottom: -20px;
+  
 }
 
 .swiper-slide,
 .blockquote {
   width: 100%;
   box-sizing: border-box;
+  transition: transform 0.5s ease;
+  will-change: transform;
 }
 
 /* При активном клике меняем курсор на схваченный */
@@ -465,3 +473,119 @@
 .kart a.link:hover{
   color: var(--link-color-hover);
 }
+
+/* Стили для  Service */
+/* Заголовок для раздела "Сферы применения" */
+.service-section-title{
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Немного уменьшаем вертикальные отступы у всего блока Service */
+.bg-color-sky-light {
+  padding: 40px 0;
+}
+
+/* Стили для блока Service */
+.service{
+  background-color: #f7f7f7;
+  padding: 25px;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  min-height: 320px;
+}
+
+/* Эффект при наведении: карточка поднимается (на 3px) и появляется легкая тень */
+.service:hover{
+  transform: translateY(2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Отключаем действие ссылок внутри блока service */
+.service a.content-wrapper-link{
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+/* Стили заголовка внутри блока service */
+.servce-info h4{
+  font-size: h4;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif ;
+  color: #222;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* Стили параграфа внутри блока service */
+.servce-info p{
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  text-align: left;
+  margin: 0;
+}
+
+/* Стили для иконок блока service */
+.service-element i{
+  font-size: 40px;
+  color: #00e1ff;
+  display: block;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover .service-element i {
+  transform: translateY(2px);
+}
+
+/* Блок с Clients  */
+/* Фоновая обёртка блока Клиентов */
+.bg-color-sky-light {
+  padding: 40px 0;
+}
+
+/* Сетка клиентов: 4 колонки, автоматически 2 ряда при 8 элементах */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+/* Стили для каждого "куба" */
+.client-cube {
+  background-color: #adadad;           /* Тонкий едва заметный серый фон */
+  padding: 20px;                       /* Отступы для отодвигания контента от краёв */
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  min-height: 140px;                   /* Сделать куб чуть выше */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* pointer-events: none;*/
+  cursor: default;
+}
+
+/* Эффект при наведении */
+.client-cube:hover {
+  transform: translateY(-3px);
+  background-color: #20b4c8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  fill: #ccc;
+}
+
+/* Стили для изображений внутри "куба" */
+.client-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+

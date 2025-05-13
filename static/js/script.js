@@ -25,6 +25,9 @@ $(document).ready(function(){
 });
 
 let swiper = new Swiper('.swiper-testimonials', {
+    loop: true,
+    speed: 500, // плавность перехода
+    spaceBetween: 20,
   pagination: {
     el: '.swiper-testimonials-pagination',
     type: 'custom',
@@ -40,8 +43,8 @@ let swiper = new Swiper('.swiper-testimonials', {
 
 
 swiper.on('slideChange', function () {
-  var currentIndex = swiper.realIndex + 1;
-  var totalSlides = swiper.slides.length;
+  let currentIndex = swiper.realIndex + 1;
+  let totalSlides = swiper.slides.length;
   // Обновить нужный элемент; например, если слайдер один, можно делать так:
   document.querySelector('.slide-counter').innerText = currentIndex + '/' + totalSlides;
 });
