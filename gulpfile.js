@@ -27,7 +27,7 @@ function sassTask() {
  */
 function minifyCssTask() {
   // Минифицируем основной файл layout.css
-  gulp.src(['static/css/layout.css', '!static/css/layout.min.css'])
+  gulp.src(['static/css/layout.css', 'static/css/style.css','!static/css/*.min.css'])
     .pipe(cleanCSS({ debug: true }, details => {
       console.log(details.name + ': ' + details.stats.originalSize);
       console.log(details.name + ': ' + details.stats.minifiedSize);

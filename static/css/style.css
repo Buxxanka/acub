@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-  --link-color: #00bed7;
-  --link-color-hover: #0099ad;
+  --link-color: rgb(57, 147, 208);
+  --link-color-hover: rgba(57, 148, 208, 0.726);
+}
+
+.carousel-title{
+  font-size: 46px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .carousel-title h1,
@@ -43,6 +51,7 @@
   text-align: center;
   text-decoration: none;
   border: 0.5px solid rgba(255,255,255,0.27);
+  border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
   box-sizing: border-box;
   padding: 10px;
@@ -56,12 +65,12 @@
 }
 
 /* Модификаторы для разных типов квадратов (если применимо) */
-.square-target   { height: 170px !important; }
+.square-target   { height: 190px !important; }
 .square-chill    { height: 180px !important; }
 .square-medical  { height: 165px !important; }
 .square-school   { height: 150px !important; }
 .square-build    { height: 160px !important; }
-.square-car      { height: 140px; }
+.square-car      { height: 140px !important; }
 
 /* Стили для квадратного элемента с номером */
 .square-number {
@@ -113,13 +122,14 @@
 /* --- Блок с описанием (находится ниже) --- */
 .square-desc {
   font-family: 'Roboto', sans-serif;
-  font-size: 13px;
+  font-size: 14px ;
   line-height: 1.2;
   color: #ffffff;
   white-space: normal;
   text-align: left;
   width: 100%;
   margin-top: 8px;
+  padding-left: 10px;
 }
 
 /* Hover-эффект для квадратов */
@@ -135,6 +145,13 @@
   color: rgb(80, 80, 80);
 }
 
+.text-uppercase{
+  border-radius: 8px;
+}
+
+.text-uppercase:hover{
+  color: rgb(80, 80, 80) !important;
+}
 
 
 
@@ -315,6 +332,7 @@
   width: 100%;
   height: 100%;
   display: block;
+  border-radius: 8px;
   -webkit-box-shadow: -22px 22px 4px 2px rgba(28, 28, 28, 0.65);
   -moz-box-shadow: -22px 22px 4px 2px rgba(28, 28, 28, 0.65);
   box-shadow: -22px 22px 4px 2px rgba(28, 28, 28, 0.65);
@@ -328,25 +346,26 @@
   width: 100%;
   height: 100%;
   background-color: #84292937;
+  border-radius: 8px;
   pointer-events: none;
 }
 
 .image-office{
-  margin-right: 180px;
-  width: 250px;
+  margin-right: 240px;
+  margin-bottom: 30px;
+  width: 320px;
   height: 100%;
 }
 
 .image-robot{
   margin-right: 100px;
-  margin-top: 30px;
-  width: 460px;
+  width: 550px;
   height: 100%;
 }
 
 .image-card{
-  margin-right: 140px;
-  width: 400px;
+  margin-right: 150px;
+  width: 480px;
   height: 100%;
 }
 
@@ -446,7 +465,7 @@
 }
 
 
-.text-uppercase {
+.text-uppercases {
   text-transform: uppercase;
   font-size: 14px;
   margin-left: 10px;
@@ -464,14 +483,14 @@
 
 .kart a.link{
   font-size: 14px;
-  color: var(--link-color);
+  color: rgb(57, 147, 208);
   text-decoration: none;
   display: inline-block;
   margin-top: 8px;
 }
 
 .kart a.link:hover{
-  color: var(--link-color-hover);
+  color: rgba(57, 148, 208, 0.726);
 }
 
 /* Стили для  Service */
@@ -481,7 +500,7 @@
   font-weight: 600;
   color: #333;
   margin-bottom: 20px;
-  text-align: left;
+  text-align: center;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -535,7 +554,7 @@
 /* Стили для иконок блока service */
 .service-element i{
   font-size: 40px;
-  color: #00e1ff;
+  color: rgb(57, 147, 208);
   display: block;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
@@ -555,14 +574,15 @@
 .clients-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 5px;
+  margin-bottom: 100px;
 }
 
 /* Стили для каждого "куба" */
 .client-cube {
-  background-color: #adadad;           /* Тонкий едва заметный серый фон */
+  background-color: #f4f4f4;           /* Тонкий едва заметный серый фон */
   padding: 20px;                       /* Отступы для отодвигания контента от краёв */
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 4px;
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   min-height: 140px;                   /* Сделать куб чуть выше */
@@ -576,7 +596,7 @@
 /* Эффект при наведении */
 .client-cube:hover {
   transform: translateY(-3px);
-  background-color: #20b4c8;
+  background-color: #114161;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   fill: #ccc;
 }
@@ -588,4 +608,66 @@
   display: block;
   margin: 0 auto;
 }
+
+
+/* Стили для Promo Section */
+
+/* Общий стиль для Promo Section */
+.promo-section {
+  margin: 100px 0 100px 0;
+  position: relative;
+  background-color: #f0faff; /* или примените вашу палитру: в данном случае нейтральный светлый фон */
+}
+
+
+/* Flex-обёртка для текста и картинки */
+.promo-content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Текстовый блок (левая колонка) */
+.promo-section-col {
+  flex: 1 1 55%;
+  padding: 20px;
+}
+
+/* Стили заголовков и абзацев внутри текстового блока */
+.promo-section-col h2 {
+  font-size: 28px;
+  color: var(--link-color); 
+  margin-bottom: 10px;
+}
+
+.promo-section-col h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.promo-section-col p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Блок с изображением (правая колонка) */
+.promo-section-img-right {
+  flex: 1 1 40%;
+  padding: 20px;
+  text-align: right; /* выравнивание изображения по правому краю */
+}
+
+/* Изображение внутри блока */
+.promo-section-img-right img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  height: 100%;
+  width: 400px;
+}
+
 
