@@ -2,13 +2,10 @@ html {
   overflow-x: hidden;
 }
 
-html, html a, body {
+html, html a{
   -webkit-font-smoothing: antialiased;
 }
 
-body {
-  font-family: Hind, sans-serif;
-}
 
 p {
   font-size: 15px;

@@ -7,12 +7,8 @@ html {
   overflow-x: hidden;
 }
 
-html, html a, body {
+html, html a {
   -webkit-font-smoothing: antialiased;
-}
-
-body {
-  font-family: Hind, sans-serif;
 }
 
 p {
@@ -306,11 +302,7 @@ h4 {
     top: 0;
     right: 50%;
   }
-  .promo-section .promo-section-img-right {
-    position: absolute;
-    top: 0;
-    left: 50%;
-  }
+
   .promo-section .ver-center {
     display: table;
     height: 400px;
@@ -406,7 +398,6 @@ h4 {
 }
 
 .footer {
-  background: url(../img/1920x1080/03.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
