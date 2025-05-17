@@ -29,6 +29,7 @@
     "ansi-cyan": "^0.1.1",
     "ansi-red": "^0.1.1",
     "arr-flatten": "^1.1.0",
+    "axios": "^1.9.0",
     "deprecated": "^0.0.2",
     "gulp-newer": "^1.4.0",
     "gulp-util": "^1.0.0",

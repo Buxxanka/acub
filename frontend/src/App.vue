@@ -1,20 +1,24 @@
 <template>
   <div id="app">
-    <h1>Привет от Vue!</h1>
-    <p>Это минимальное Vue-приложение, интегрированное в наш Django-проект.</p>
+    <!-- Подключаем компонент формы -->
+    <ContactForm />
   </div>
 </template>
 
 <script>
+import ContactForm from './components/ContactForm.vue'
+
 export default {
-  name: "App",
-};
+  name: 'App',
+  components: {
+    ContactForm
+  }
+}
 </script>
 
-<style scoped>
-#app {
-  text-align: center;
-  padding: 20px;
-}
+<style>
+/* Добавьте свои глобальные стили, если требуется */
 </style>
+
+
 

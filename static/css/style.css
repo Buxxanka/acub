@@ -479,6 +479,7 @@ body{
   font-size: 14px;
   margin-left: 10px;
   color: #777;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .kart p{
@@ -690,8 +691,10 @@ body{
 
 
 /* Основной стиль футера */
+
+
 .footer {
-  background-color: #222;  /* Темный фон для футера */
+  background-color: #393b3c;  /* Темный фон для футера */
   color: #ccc;             /* Светлый текст в футере */
   padding: 40px 0;
   font-family: 'Hind', sans-serif;
@@ -711,7 +714,7 @@ body{
 .footer-seperator {
   border-bottom: 1px solid #444;  /* Легкая граница снизу */
   padding-bottom: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* Списки в футере (навигация и соцсети) */
@@ -727,8 +730,9 @@ body{
 /* Стилизация заголовков внутри футера */
 .footer h2,
 .footer h3 {
-  margin-bottom: 15px;
-  font-weight: 700;
+  font-size: 24px;       /* Немного уменьшенный размер для гармоничного вида */
+  margin-bottom: 20px;
+  color: #fff;
 }
 .footer h2 {
   color: #00bed7;   /* Используем фирменный цвет для одного из заголовков */
@@ -740,17 +744,19 @@ body{
 /* Стилизация формы */
 .footer input.form-control,
 .footer textarea.form-control {
-  background-color: #333;  /* Темный фон полей */
+  background-color: #505355;  /* Темный фон полей */
   border: 1px solid #444;
-  color: #ccc;
+  color: #ffffff;
   padding: 10px;
   margin-bottom: 15px;
   width: 100%;
   box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
 }
 .footer input::placeholder,
 .footer textarea::placeholder {
-  color: #777;
+  color: #ffffff;
 }
 
 /* Кнопка отправки */
@@ -768,15 +774,199 @@ body{
 }
 
 /* Выравнивание изображения или логотипа в правой части футера (если требуется) */
-.footer .text-right {
-  text-align: right;
+.footer .text-center {
+  text-align: center;
 }
 
 /* Дополнительные стили для копирайта */
 .footer p.margin-b-0 {
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+/* Стили для контактной информации */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact-item {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #cef7ff;
 }
 
 
+.footer-contact-item i {
+  color: #00bed7;    /* Фирменный цвет для иконок */
+  margin-right: 10px;
+  font-size: 20px;
+}
 
+/* Кнопка отправки */
+.btn-theme {
+  background-color: #00bed7;  /* Фирменный синий */
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif !important; /* новый шрифт */
+}
+.btn-theme:hover {
+  background-color: #0098b6;
+}
+
+/* Низ футера: копирайт */
+.footer-bottom {
+  padding: 20px 0 !important;       
+  font-size: 14px;
+  color: #999;
+}
+
+/* Дополнительная кнопка "Связаться с нами" */
+.btn-contact {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+}
+
+/* Отступ для правой колонки контактов */
+.contact-wrapper {
+  padding-left: 100px; /* отступ для выравнивания */
+}
+
+/* стили для footer */
+.footer {
+    background-color: #393b3c;  /* Темный фон для футера */
+    color: #ccc;             /* Светлый текст в футере */
+    padding: 40px 0;
+    font-family: 'Hind', sans-serif;
+  }
+
+  /* Ссылки футера */
+  .footer a {
+    color: #00bed7;  /* Фирменный синий для ссылок */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer a:hover {
+    color: #fff;  /* При наведении ссылки становятся белыми */
+  }
+
+  /* Разделитель внутри футера */
+  .footer-seperator {
+    border-bottom: 1px solid #444;  /* Легкая граница снизу */
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+
+  /* Списки в футере (навигация и соцсети) */
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-list-item {
+    margin-bottom: 10px;
+  }
+
+  /* Стилизация заголовков внутри футера */
+  .footer h2,
+  .footer h3 {
+    font-size: 24px;       /* Немного уменьшенный размер для гармоничного вида */
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .footer h2 {
+    color: #00bed7;   /* Используем фирменный цвет для одного из заголовков */
+  }
+  .footer h2.color-white {
+    color: #fff;      /* Если явно указан класс color-white */
+  }
+
+  /* Стилизация формы */
+  .footer input.form-control,
+  .footer textarea.form-control {
+    background-color: #505355;  /* Темный фон полей */
+    border: 1px solid #444;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    resize: none;
+    font-size: 16px;
+  }
+  
+.footer input.form-control{
+  height: 50px;
+}
+
+  .footer input::placeholder,
+  .footer textarea::placeholder {
+    color: #ffffff8a;
+  }
+  /* Кнопка отправки */
+  .footer button.btn-theme {
+    background-color: #00bed7;  /* Фирменный синий фон для кнопки */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .footer button.btn-theme:hover {
+    background-color: #0098b6;
+  }
+
+  /* Выравнивание изображения или логотипа в правой части футера (если требуется) */
+  .footer .text-center {
+    text-align: center;
+  }
+
+  /* Дополнительные стили для копирайта */
+  .footer p.margin-b-0 {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  /* Стили для контактной информации */
+  .footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-contact-item {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #cef7ff;
+  }
+
+
+  .footer-contact-item i {
+    color: #00bed7;    /* Фирменный цвет для иконок */
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  /* Низ футера: копирайт */
+  .footer-bottom {
+    padding: 20px 0 !important;       
+    font-size: 14px;
+    color: #999;
+  }
+
+  .success-message {
+    color: green;
+    margin-top: 20px;
+  }
+  .error-message {
+    color: red;
+    margin-top: 20px;
+  }

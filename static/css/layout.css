@@ -780,39 +780,6 @@ h4 {
   transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1);
 }
 
-.form-control {
-  height: 50px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #a6a7aa;
-  background: #fafafa;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  padding-left: 15px;
-}
-.form-control::-moz-placeholder {
-  color: #a6a7aa;
-}
-.form-control:-ms-input-placeholder {
-  color: #a6a7aa;
-}
-.form-control::-webkit-input-placeholder {
-  color: #a6a7aa;
-}
-.form-control:focus {
-  color: #515769;
-  box-shadow: none;
-}
-.form-control:focus::-moz-placeholder {
-  color: #515769;
-}
-.form-control:focus:-ms-input-placeholder {
-  color: #515769;
-}
-.form-control:focus::-webkit-input-placeholder {
-  color: #515769;
-}
 
 /*------------------------------------------------------------------
     [Full Screen Carousel]
