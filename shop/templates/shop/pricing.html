@@ -7,13 +7,147 @@
 <!--========== PARALLAX ==========-->
 <div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/sliders/Header4.jpg' %}">
     <div class="parallax-content container">
-        <h1 class="carousel-title">Идеи, рынок и предложения</h1>
-        <p>Узнайте, как инновационные карты и бейджи расширяют рынок уникальным предложением и множеством вариантов.</p>
+        <h2 class="carousel-title custom-header">Идеи, рынок и предложения</h2>
+        <p class="custom-paragraph">Узнайте, как инновационные карты и бейджи расширяют рынок уникальным <br> предложением и множеством вариантов.</p>
     </div>
 </div>
 <!--========== PARALLAX ==========-->
 
-
+<!-- Тело -->
+<div class="body-card">
+<div class="cards-container">
+    <!-- Карточка 1 -->
+    <div class="card card-bg1">
+      <div class="card-content">
+        <div class="card-header">
+          <i class="fa-solid fa-city"></i>
+          <h3 class="bisnes-position">Для компании</h3>
+        </div>
+        <p class="card-description">Облегчим выдачу идентификационных карт для сотрудников, 
+            бейджей для посетителей и увеличим вашу безопасность благодаря высококачественным бейджам-пропускам. 
+            Вы можете печатать их сами, по мере необходимости в них.</p>
+        <div class="card-button">
+            <a href="{% url 'company' %}" class="card-link">Узнать больше</a>
+        </div>
+        </div>
+    </div>
+    
+    <!-- Карточка 2 -->
+    <div class="card card-bg2">
+      <div class="card-content">
+        <div class="card-header">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3 class="school-position">Образование</h3>
+        </div>
+        <p class="card-description">
+            Решения ACUBE помогут вам повысить эффективность и оптимизировать безопасность в вашем учебном заведении. 
+            Откройте для себя все преимущества печати собственных школьных бейджей и школьных удостоверений личности.</p>
+        <div class="card-button">
+            <a href="{% url 'education' %}" class="card-link">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка 3 -->
+    <div class="card card-bg3">
+      <div class="card-content">
+        <div class="card-header">
+          <i class="fa-solid fa-store"></i>
+          <h3>Розничная торговля</h3>
+        </div>
+        <p class="card-description">
+            Инновационные решения Evolis обеспечивают мгновенную выдачу карт постоянного покупателя и пластиковых ценников,
+             что позволит Вам увеличить качество обслуживания покупателей, сохранить покупателей и увеличить объем продаж.
+        </p>
+        <div class="card-button">
+            <a href="{% url 'retail' %}" class="card-link">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка 4 -->
+    <div class="card card-bg4">
+      <div class="card-content">
+        <div class="card-header">
+          <i class="fa-solid fa-credit-card"></i>
+          <h3 class="cards-position">Платежные карты</h3>
+        </div>
+        <p class="card-description">Возможность получать персонализированные банковские карты на месте воспринимается клиентами 
+            очень позитивно. Благодаря решениям AB project вы можете легко предложить эту услугу, обеспечивая оптимальную безопасность 
+            и соответствие рекомендациям платежных сетей.</p>
+        <div class="card-button">
+            <a href="{% url 'paymentCard' %}" class="card-link">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка 5 -->
+    <div class="card card-bg5">
+      <div class="card-content">
+        <div class="card-header">
+          <i class="fa-solid fa-landmark"></i>
+          <h3>Государственные органы</h3>
+        </div>
+        <p class="card-description">
+            Решение ACUBE для печати и кодирования защиту для передачи официальных документов 
+            государственными органами и исключают подделку идентификационных карт.</p>
+        <div class="card-button">
+            <a href="{% url 'stateAuthorities' %}" class="card-link">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка 6 -->
+    <div class="card card-bg6">
+      <div class="card-content">
+        <div class="card-header">
+          <i class="fa-solid fa-hotel "></i>
+          <h3>Гостиничный бизнес и индустрия отдыха</h3>
+        </div>
+        <p class="card-description">
+            Произведите впечатление на клиентов и увеличьте уровень индивидуализации вашей организации
+            с высококачественными членскими картами, напечатанными на месте с использованием принтеров ACUBE.</p>
+        <div class="card-button">
+            <a href="{% url 'vacation' %}" class="card-link">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка 7 -->
+    <div class="card card-bg7">
+      <div class="card-content">
+        <div class="card-header">
+          <i class="fa-solid fa-hospital"></i>
+          <h3 class="health-position">Здравохранение</h3>
+        </div>
+        <p class="card-description">
+            Решения ACUBE помогают организациям здравоохранения идентифицировать людей и имущество, 
+            а также повысить безопасность и эффективность процедур. Медицинские страховые карты, бейдж посетителя...</p>
+        <div class="card-button">
+            <a href="{% url 'health' %}" class="card-link">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Карточка 8 -->
+    <div class="card card-bg8">
+      <div class="card-content">
+        <div class="card-header">
+          <i class="fa-solid fa-truck "></i>
+          <h3 class="card-position">Транспорт</h3>
+        </div>
+        <p class="card-description">
+            Используя принтеры ACUBE увеличьте прибыльность вашей транспортной сети с помощью мгновенной
+            выдачи дополнительных персонализованных проездных билетов. Экономия времени , немедленное использование.</p>
+        <div class="card-button">
+            <a href="{% url 'transportation' %}" class="card-link">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</div>
+<!-- Конец тело -->
 
 
 {% endblock %}

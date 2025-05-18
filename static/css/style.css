@@ -970,3 +970,173 @@ body{
     color: red;
     margin-top: 20px;
   }
+
+
+/* Сдесь стили с страницы Рынки и предложение */
+/* сдесь стили для parallax */
+.custom-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em; 
+  color: #ffffff;    
+}
+
+/* Новый стиль для абзаца p */
+.custom-paragraph {
+  font-family: 'Roboto', sans-serif;     
+  font-size: 1.2em;
+  color: #bdbdbd;
+}
+
+
+/* сдесь стили для тело */
+/* Контейнер карточек: 4 карточки в ряду */
+.body-card{
+  background-color: #ecececd2;
+  padding: 40px 0;
+}
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;   /* уменьшенный отступ между карточками */
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+    
+    /* Стиль карточки – немного меньшие по высоте */
+  .card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 360px;      /* уменьшенная высота */
+    background-size: cover;
+    background-position: center;
+    /* Используем flex для центрирования содержимого */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid #a2a2a2;
+    margin: 10px 0;
+  }
+    
+  .card:hover {
+    transform: translateY(-5px);
+  }
+    
+  /* Контент карточки – выровнен по центру */
+  .card-content {
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+  }
+    
+  /* Выравнивание иконки и заголовка на одной строке */
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin:15px 0;
+  }
+    
+  .card-header i {
+    font-size: 40px;
+    color: #ececec;
+    margin-right: 10px ;
+    margin-left: 15px;
+  }
+    
+
+  .card-header h3 {
+    font-size: 18px;
+    color: #f1f1f1;
+    margin: 10px 0;
+  }
+    
+.bisnes-position{margin-right: 60px !important;}
+.school-position{margin-right: 70px !important;}
+.health-position{margin-right: 50px !important;}
+.card-position{margin-right: 80px !important;}
+.cards-position{margin-right: 40px !important;}
+
+
+  .card-description {
+    color: #e1e1e1e7;
+    flex: 1;
+    padding: 10px ;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin: 10px 0;
+  }
+    
+  .card-button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px; /* отступ снизу для кнопки */
+  }
+
+  .card-link {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+    
+  .card-link:hover {
+    background-color: #2980b9;
+    color: #15151583;
+  }
+    
+    /* Фоновые изображения карточек, определяемые через CSS для каждого уникального класса */
+    .card-bg1 { background-image: url('/static/img/sliders/Header1.jpg'); }
+    .card-bg2 { background-image: url('/static/img/sliders/Header2.jpg'); }
+    .card-bg3 { background-image: url('/static/img/sliders/Header3.jpg'); }
+    .card-bg4 { background-image: url('/static/img/sliders/Header4.jpg'); }
+    .card-bg5 { background-image: url('/static/img/sliders/Header5.jpg'); }
+    .card-bg6 { background-image: url('/static/img/sliders/Head6.jpg'); }
+    .card-bg7 { background-image: url('/static/img/sliders/Header7.jpg'); }
+    .card-bg8 { background-image: url('/static/img/sliders/Header8.png'); }
+    
+    /* Адаптивность: */
+    @media (max-width: 1024px) {
+      .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .cards-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+/* Стили страницы Наши решения */
+/* Стили Паралакс */
+.parallax-printer{ 
+  position: relative;
+}
+.parallax-printer::before{
+  background-image: url('/static/img/original-125h.jpeg');
+  background-size: cover;
+  filter: brightness(35%);
+  background-size: cover;
+  background-position: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.custom-paragraph-products{
+  color: #fff;
+}
