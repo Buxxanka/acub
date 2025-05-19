@@ -1140,3 +1140,112 @@ body{
 .custom-paragraph-products{
   color: #fff;
 }
+
+
+/* Стили для блоков в теле */
+/* Контейнер страницы */
+    .container {
+      max-width: 1800px;
+      margin: 0 auto;
+    }
+    /* Главный заголовок над блоками */
+    .main-heading {
+      font-size: 40px;        
+      margin: 100px 0 50px 50px; 
+      text-align: left;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+    }
+   
+    .grid-container {
+      width: 100%; 
+      margin: 0 auto 100px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px; 
+    }
+    /* Базовый стиль блока */
+    .block {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 20px; 
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    /* Hover-эффект: блок немного поднимается и появляется тень */
+    .block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    /* Стили для изображения внутри блока */
+    .block img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px; 
+    }
+
+.badgy{margin: 20px auto 30px auto !important;}
+.primacy{
+  margin: 15px auto 20px auto !important;
+  width: 110% !important;
+}
+.zenius{
+  width: 80% !important;
+  margin: -50px auto -20px auto !important;
+}
+.futronic{
+  margin: 5px auto 10px auto !important;
+  width: 80% !important;
+}
+
+
+    /* Заголовок блока */
+    .block h3 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 22px;
+      margin: 10px 0 10px 0;
+      color: #222;
+    }
+    /* Описание блока */
+    .block p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight:200;
+      margin-bottom: 15px;
+      color: #626262;
+      flex-grow: 1; 
+    }
+    /* Кнопка-ссылка внизу блока */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--link-color);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 16px;
+      align-self: flex-start;  
+      margin-top: 10px;
+    }
+
+    .btn:hover{
+      background: var(--link-color-hover);
+      color: #fff;
+    }
+    /* Адаптивность: для экранов менее 768px отвечаем за макет */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr; /* Один блок в ряду */
+        width: calc(100% - 40px);  /* уменьшаем боковые отступы */
+        margin-left: 20px;
+      }
+      .main-heading {
+        margin-left: 20px;  /* корректировка отступа заголовка на мобильных */
+        font-size: 28px;
+      }
+    }
+  
