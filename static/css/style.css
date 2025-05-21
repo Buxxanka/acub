@@ -1444,7 +1444,7 @@ font-family: var(--font-roboto);
 .b1-app-row {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   gap: 30px;
 }
 
@@ -1485,6 +1485,7 @@ font-family: var(--font-roboto);
   flex-direction: column;
   gap: 20px;
   margin-bottom: 20px;
+  margin-left: 30px;
 }
 
 
@@ -1523,7 +1524,7 @@ margin-bottom: 10px;
 .b2-feature-desc {
   font-family: var(--font-roboto);
   font-weight: normal;
-  font-size: 15px;
+  font-size: 17px;
   margin: 0 0 20px 0;
   color: #000000af;
 }
@@ -1571,7 +1572,7 @@ margin-bottom: 10px;
 .b3-text {
   font-family: var(--font-roboto);
   font-weight: normal;
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 10px;
   margin-top: 10px;
   color: #e0e0e0;
@@ -1587,20 +1588,28 @@ margin-bottom: 10px;
 
 /* Заголовки и описание */
 .b4-heading {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 10px;
-  text-align: center;
+  text-align: left;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: #1d1d1deb;
+  margin-top: 50px;
 }
 .b4-subheading {
   font-size: 22px;
   margin-bottom: 10px;
-  text-align: center;
+  text-align:  left;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
   color: #333;
 }
 .b4-description {
+  font-family: var(--font-roboto);
+  font-weight: normal;
   font-size: 16px;
-  margin-bottom: 20px;
-  text-align: center;
+  margin-bottom: 40px;
+  text-align: left;
   color: #555;
 }
 
@@ -1615,15 +1624,28 @@ margin-bottom: 10px;
 .b4-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  margin-bottom: 25px;
+
+}
+
+.b4-item-left{
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  border: 3px solid rgb(55, 137, 192);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
 }
 
 /* Круг с фоном и числом */
 .b4-circle {
-  width: 40px;
-  height: 40px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  background-color: #3498db; /* фоновый цвет круга */
+  background-color: rgb(53, 136, 191); /* фоновый цвет круга */
   color: #fff;
   display: flex;
   align-items: center;
@@ -1636,12 +1658,18 @@ margin-bottom: 10px;
   flex: 1;
 }
 .b4-item-heading {
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: #000000bb;
 }
 .b4-item-text {
-  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: 16px;
   margin: 0;
+  color: #00000097;
 }
 
 /* Дополнительный текст внизу блока */
@@ -1649,7 +1677,10 @@ margin-bottom: 10px;
   font-size: 16px;
   color: #555;
   margin-top: 20px;
-  text-align: center;
+  text-align: left;
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  margin-bottom: 50px;
 }
 
 /* блок 5*/
@@ -1657,6 +1688,8 @@ margin-bottom: 10px;
 
 .b5-back-second{
   background-color: #424158;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
 }
 /* Общий блок 5 с фоновым цветом, как у блока 3 (например, серым) */
 .b5-block {
@@ -1665,19 +1698,21 @@ margin-bottom: 10px;
 
 .b5-content {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   align-items: flex-start;
+  margin: 130px auto;
 }
 
 /* Левый столбец: фото */
 .b5-left {
   flex: 1;
+  padding-left: 40px;
 }
 .b5-photo {
-  max-width: 100%;
+  width: 420px;
   height: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 6px;
+  margin-top: 10px;
 }
 
 /* Правый столбец: текстовый контент */
@@ -1685,13 +1720,18 @@ margin-bottom: 10px;
   flex: 2;
 }
 .b5-heading {
-  font-size: 28px;
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 36px;
   margin-bottom: 10px;
+  color: #fff;
 }
 .b5-text {
-  font-size: 16px;
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 18px;
   margin-bottom: 15px;
-  color: #555;
+  color: #fff;
 }
 
 /* Мини-элементы блока 5 */
@@ -1706,16 +1746,22 @@ margin-bottom: 10px;
   /* Убираем justify-content: space-between, чтобы элементы были рядом */
 }
 .b5-mini-heading {
-  font-size: 18px;
+  font-size: 20px;
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  color: #fff;
 }
 .b5-mini-icon {
-  font-size: 20px;
-  color: #333;
+  font-size: 38px;
+  color: rgb(53, 136, 191);
+  margin: 2px 5px;
 }
 .b5-mini-desc {
-  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
   margin: 5px 0 0 0;
-  color: #666;
+  color: #ffffffd4;
 }
 
 /* блок 6 */
@@ -1727,22 +1773,30 @@ margin-bottom: 10px;
 
 /* Верхняя часть блока 6 */
 .b6-main-heading {
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 10px;
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 30px;
+  text-align: left;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  color: #000000d8;
 }
 .b6-main-text {
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 10px;
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
   color: #555;
 }
 
 /* Подзаголовки для каждой группы */
 .b6-subheading {
-  font-size: 20px;
-  text-align: center;
-  margin: 20px 0 10px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 22px;
+  text-align: left;
+  margin: 50px 0 30px 10px;
   color: #333;
 }
 
@@ -1750,35 +1804,360 @@ margin-bottom: 10px;
 .b6-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
 /* Каждый мини-блок (без бордера) */
 .b6-item {
   padding: 10px;
-  background: #fff;
-  border-radius: 4px;
 }
 
 /* Верхняя линия мини-блока: текст слева, иконка справа */
 .b6-item-header {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 .b6-item-title {
-  font-size: 16px;
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 24px;
   margin: 0;
   flex: 1;
+  color: #000000;
 }
 .b6-item-icon {
-  font-size: 20px;
-  color: #333;
+  font-size: 50px;
+  color: rgb(53, 136, 191);
+  margin-left: 5px;
 }
 
 /* Описание мини-блока */
 .b6-item-text {
-  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
   margin-top: 5px;
-  color: #666;
+  color: #1c1c1c;
+  line-height: 1.8;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 768px) {
+  .b1-apps {
+    flex-direction: column;
+  }
+  .b1-item {
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .b2-heading {
+    font-size: 24px;
+  }
+  .b2-text {
+    font-size: 14px;
+  }
+  .b2-feature-icon {
+    font-size: 32px;
+    min-width: 40px;
+  }
+  .b2-feature-title {
+    font-size: 18px;
+  }
+  .b2-feature-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .b3-heading {
+    font-size: 20px;
+  }
+  .b3-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .b4-heading { font-size: 24px; }
+  .b4-subheading { font-size: 20px; }
+  .b4-description { font-size: 14px; }
+  .b4-item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .b4-circle {
+    margin-bottom: 5px;
+  }
+  .b4-item-right {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .b5-content {
+    flex-direction: column;
+  }
+  .b5-heading {
+    font-size: 24px;
+  }
+  .b5-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .b6-main-heading {
+    font-size: 24px;
+  }
+  .b6-main-text {
+    font-size: 14px;
+  }
+  .b6-subheading {
+    font-size: 18px;
+  }
+  .b6-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* стили для страницы образование */
+
+.np-block1,
+.np-block2{
+  width: calc(100% - 300px);
+  margin: 0 auto; /* Центрирование блока по горизонтали */
+}
+
+/* Стили для блока 2 */
+.np-block1 {
+  padding: 20px;
+  margin: 40px auto;
+}
+.np-block1-heading {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 34px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.np-block1-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.np-block1-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.np-block1-left p{
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  color: #706d6d;
+  font-size: 16px;
+  margin: auto 20px;
+}
+
+.np-block1-right {
+  flex: 1;
+}
+.np-block1-image {
+  max-width: 520px;
+  border-radius: 6px;
+  height: auto;
+  display: block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .np-block1-content {
+    flex-direction: column;
+  }
+}
+
+
+/* Стили для блока 3 */
+.np-block2 {
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.np-block2-mt{margin-top: 80px;}
+
+.np-block2-heading {
+  font-family: var(--font-roboto);
+  font-weight: 600;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+.np-block2-text {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #706d6d;
+}
+
+.np-block2-text-mb{margin-bottom: 100px;}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .np-block2-heading {
+    font-size: 28px;
+  }
+  .np-block2-text {
+    font-size: 16px;
+  }
+}
+
+/* Стили для блока 4 */
+.np-block3-list {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+.np-block3-list li {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
+  margin: 20px 10px 20px 10px;
+  color: #fff;
+}
+
+@media (max-width: 768px){
+  .np-block3-list li{font-size: 14px;}
+}
+
+/* стили для блока 5 */
+.np-block3-custom-list {
+  list-style: none;
+  padding-left: 20px;
+}
+.np-block3-custom-list li {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+.np-block3-custom-list li:first-child::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  padding-left: 5px ;
+}
+.np-block3-custom-list li:not(:first-child)::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px){.np-block3-custom-list li {font-size: 14px;}}
+
+/*  Страница Розничная торговля */
+
+/* Общие стили для обоих блоков */
+.np2-block {
+  padding: 20px;
+  margin-bottom: 30px;
+  background: #fff;
+  width: calc(100% - 300px);
+  margin: 0 auto; /* Центрирование блока по горизонтали */
+}
+
+.np2-block-mt{margin-top: 50px;}
+.np2-block-pb{padding-bottom: 100px;}
+
+.np2-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Картинка — ограничиваем ширину и делаем адаптивной */
+.np2-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 40px;
+}
+
+/* Текстовый блок */
+.np2-text {
+  flex: 1;
+}
+
+.np2-title {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #2b2b2bda;
+}
+
+.np2-description {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 18px; 
+  color: #555;
+}
+
+/* Для блока 2 — меняем направление элементов */
+.np2-content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Адаптивность: на экранах меньше 768px выстраиваем элементы в колонку */
+@media (max-width: 768px) {
+  .np2-content {
+    flex-direction: column;
+  }
+}
+
+/* Сайт Платежные карты */
+
+.b1-block-left{
+  justify-content: left !important;
+  margin-left: 50px;
+}
+
+.np-block3-list-col li{
+  font-size: 16px !important;
+  margin: 0 0 20px 0 !important;
+  color: #000000af !important;
+}
+
+
+.b-payCard-back-igm{
+  margin-top: 100px ;
+  background-color: #000;
+  background-image: url('/static/img/bankomat.jpeg');
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;    
+  width: 100vw;         
+  height: 60vh; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.np-block2-payCard {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.b3-block-payCard{
+  background-color: #424158;
+  margin-top: 100px;
+  padding: 70px 100px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
 }
