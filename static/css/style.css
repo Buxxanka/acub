@@ -8,7 +8,6 @@
 }
 
 body{
-  background-color: #f0faffdf ;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -1507,10 +1506,10 @@ font-family: var(--font-roboto);
 
 /* Заголовок мини-блока */
 .b2-feature-title {
-  font-size: 22px;
+  font-size: 28px;
   margin: 0;
   font-family: var(--font-montserrat);
-  font-weight: normal;
+  font-weight: 400;
   margin: 0 0 10px 10px;
   color: #000;
 }
@@ -2160,4 +2159,209 @@ margin-bottom: 10px;
   width: 100%;
   height: 100%;
   margin-bottom: 100px;
+}
+
+
+/* Стили для страницы Государственные органы */
+.b5-mini-heading-state{
+  font-size: 24px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: #fff;
+}
+
+.b3-back-state{
+  background-color: #424158;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.b5-heading-state{
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.b5-text-state{
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 18px;
+  margin: 15px 0;
+  color: #000000;
+}
+.b5-mini-headin-state{
+  font-size: 16px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.b5-photo-state{
+  width: 480px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.b5-mini-icon-state{
+  font-size: 38px;
+  color: rgb(53, 136, 191);
+  margin: 8px;
+}
+.b3-backgr-state{
+  background-color: #F9F9F9;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.b3-heading-state{
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #000;
+}
+.b3-text-state{
+  color: #3e3e3e;
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 17px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  line-height: 1.4;
+}
+.b-state-backm{
+  width: calc(100% - 300px);
+  margin-left: 50vw;
+}
+.b3-block-state{
+  width: calc(100% - 300px);
+  margin: 0 auto;
+  background-color: #fff;
+}
+.b3-back-state-second{
+  background-color: #424158;
+  margin: 80px 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 100%;
+}
+
+
+/* Сдесь стили сайта Здравоохранение */
+/* Сброс отступов базового уровня, если нужно */
+
+/* Основной контейнер блока */
+.np-block {
+  width: calc(100% - 300px);
+  padding: 20px;
+  margin: 20px auto;
+}
+
+/* Вводный текст */
+.np-intro {
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 40px;
+  color: #2b2b2b;
+}
+
+/* Основной контейнер с двумя колонками */
+.np-main-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Левая колонка */
+.np-left {
+  flex: 1;
+}
+
+/* Заголовок левой колонки */
+.np-left-header {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* Стили для списка */
+.np-left-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+/* Элементы списка с иконкой-кругом */
+.np-left-list li {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px; 
+  color: #000;
+}
+
+/* Псевдоэлемент для синего круглого маркера */
+.np-left-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 19px;
+  height: 19px;
+  background-color: rgb(53, 136, 191);  
+  border-radius: 50%;
+}
+
+/* Правая колонка с изображением */
+.np-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.np-image {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Нижние тексты блока */
+.np-bottom-text p {
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 17px;
+  text-align: left;
+  margin: 8px 0 50px 0;
+  color: #000;
+}
+
+/* Адаптивность: при узком экране колонки выстраиваются в один столбец */
+@media (max-width: 768px) {
+  .np-main-content {
+    flex-direction: column;
+  }
+}
+
+
+/* стили для страницы Транспорт */
+.b5-photo-trns{
+  width: 420px;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 10px;
 }
