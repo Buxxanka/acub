@@ -485,8 +485,8 @@ body{
 }
 
 .kart p{
-  /* font-family: 'Roboto', sans-serif !important; */
-  font-weight: 400;
+  font-family: var(--font-roboto) !important;
+  font-weight: normal !important;
   font-size: 14px;
   line-height: 1.3;
   color: #454545;
@@ -628,7 +628,6 @@ body{
 .promo-section {
   margin: 10px 0 10px 0;
   position: relative;
-  background-color: #f0faff; /* или примените вашу палитру: в данном случае нейтральный светлый фон */
   height: 100%;
 }
 
@@ -2208,7 +2207,7 @@ margin-bottom: 10px;
 .b5-mini-icon-state{
   font-size: 38px;
   color: rgb(53, 136, 191);
-  margin: 8px;
+  margin: 5px;
 }
 .b3-backgr-state{
   background-color: #F9F9F9;
@@ -2364,4 +2363,192 @@ margin-bottom: 10px;
   height: auto;
   border-radius: 6px;
   margin-top: 10px;
+}
+
+.np-block3-trns li{
+  font-family: var(--font-roboto);
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 16px ;
+  color: #000000 ;
+}
+
+.np-block3-trns-second{
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 15px;
+  color: #000;
+  margin: 10px 0 0 40px;
+  padding: 5px 0;
+}
+
+.b5-content-trns{
+    display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  margin: 20px auto 50px;
+}
+
+.b5-mini-headin-trns{
+  font-size: 16px;
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.trns-mb{margin-bottom: 50px;}
+
+/* Дальше будут стили из папки offers */
+/* Стили для Agilia */
+
+/* Основной блок */
+
+
+.nb-block {
+  margin: 200px auto 50px;
+  padding: 20px;
+  background: #fff;
+  max-width: 1200px;
+}
+
+/* Контейнер блока – две колонки */
+.nb-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Левая колонка: слайдер и миниатюры */
+.nb-left {
+  flex: 1;
+}
+.nb-slider {
+  margin-bottom: 10px;
+}
+.nb-main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+.nb-thumbnails {
+  display: flex;
+  gap: 10px;
+}
+.nb-thumb {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  pointer-events: auto;
+}
+.nb-thumb:hover {
+  transform: translateY(-1px);
+  
+}
+
+/* Правая колонка: текст, список, ссылка и кнопки */
+.nb-right {
+  flex: 1;
+}
+.nb-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.nb-text {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+.nb-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.nb-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #555;
+}
+.nb-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: #007BFF;
+  border-radius: 50%;
+}
+
+/* Ссылка для скачивания драйверов */
+.nb-download-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  color: #007BFF;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.nb-download-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+/* Кнопки */
+.nb-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.nb-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+}
+.nb-btn-buy {
+  background-color: #007BFF;
+  color: #fff;
+}
+.nb-btn-brochure {
+  background-color: #ccc;
+  color: #333;
+}
+
+/* Адаптивность: на узких экранах колонки выстраиваются в столбик */
+@media (max-width: 768px) {
+  .nb-container {
+    flex-direction: column;
+  }
+  .nb-thumb {
+    width: 80px;
+  }
+  .nb-title {
+    font-size: 24px;
+  }
+  .nb-text,
+  .nb-list li,
+  .nb-download-link {
+    font-size: 14px;
+  }
+  .nb-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }

@@ -5,4 +5,57 @@
 
 {% block content %}
 
+
+<div class="nb-block">
+    <div class="nb-container">
+      
+      <!-- Левая колонка: Слайдер с миниатюрами -->
+      <div class="nb-left">
+        <div class="nb-slider">
+        <img src="{% static 'img/Agilia/1000x1000 (1).png' %}" 
+               alt="Главное изображение" class="nb-main-image" id="nbMainImage">
+        </div>
+        <div class="nb-thumbnails">
+          <img src="{% static 'img/Agilia/1000x1000 (2).png' %}" class="nb-thumb"
+          data-large="{% static 'img/Agilia/1000x1000 (2).png' %}">
+          <img src="{% static 'img/Agilia/1000x1000.png' %}" alt="Thumbnail 2" class="nb-thumb"
+          data-large="{% static 'img/Agilia/1000x1000.png' %}">
+          <img src="{% static 'img/Agilia/agilia3.jpg' %}" alt="Thumbnail 3" class="nb-thumb" 
+          data-large="{% static 'img/Agilia/agilia3.jpg' %}">
+          <img src="{% static 'img/Agilia/imageAgilia4.webp' %}" alt="Thumbnail 4" class="nb-thumb"
+          data-large="{% static 'img/Agilia/imageAgilia4.webp' %}">
+          <img src="{% static 'img/Agilia/1000x1000 (1).png' %}" alt="Thumbnail 4" class="nb-thumb"
+          data-large="{% static 'img/Agilia/1000x1000 (1).png' %}">
+        </div>
+      </div>
+
+      <!-- Правая колонка: Текст и управление -->
+      <div class="nb-right">
+        <h2 class="nb-title">Заголовок блока</h2>
+        <p class="nb-text">
+          Это описание блока, где разъясняются преимущества и особенности предлагаемого продукта или услуги.
+        </p>
+        <ul class="nb-list">
+          <li>Пункт 1 описания</li>
+          <li>Пункт 2 описания</li>
+          <li>Пункт 3 описания</li>
+          <li>Пункт 4 описания</li>
+          <li>Пункт 5 описания</li>
+          <li>Пункт 6 описания</li>
+          <li>Пункт 7 описания</li>
+          <li>Пункт 8 описания</li>
+          <li>Пункт 9 описания</li>
+        </ul>
+        <a href="#" class="nb-download-link">
+          <span class="nb-download-icon">i</span> Скачать драйвера для принтера
+        </a>
+        <div class="nb-buttons">
+          <button class="nb-btn nb-btn-buy">Купить товар</button>
+          <a href="brochure.pdf" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
 {% endblock %}
