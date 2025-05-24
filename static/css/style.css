@@ -11,6 +11,8 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+
+ 
 .carousel-title{
   font-size: 42px;
   color: #fff;
@@ -157,7 +159,9 @@ body{
 }
 
 .text-uppercase:hover{
-  color: rgb(80, 80, 80) !important;
+  color: rgb(46, 46, 46) !important;
+  transform: scale(1.03);
+  transition: all 0.4s ease;
 }
 
 
@@ -2403,12 +2407,20 @@ margin-bottom: 10px;
 
 /* Основной блок */
 
+.full-width-banner {
+  width: 100%;               /* Занимает всю ширину экрана */
+  height: 95px;              /* Здесь можете задать любую высоту */
+  background-color: #032341;    /* Тёмный фон. Можно изменить по желанию */
+}
+
+
 
 .nb-block {
-  margin: 200px auto 50px;
+  margin: 100px auto 50px;
   padding: 20px;
   background: #fff;
   max-width: 1200px;
+  border-bottom: #8989895a 1px solid;
 }
 
 /* Контейнер блока – две колонки */
@@ -2422,29 +2434,57 @@ margin-bottom: 10px;
   flex: 1;
 }
 .nb-slider {
-  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden; 
+  width: 540px;
+  height: 590px;
+  background-color: #f1f1f17a;
+  border-radius: 12px;
+}
+
+#nbMainImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;           
+  object-fit: contain;  
+  background: transparent;
+  mix-blend-mode: multiply;  
 }
 .nb-main-image {
-  width: 100%;
-  height: auto;
   display: block;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 .nb-thumbnails {
   display: flex;
   gap: 10px;
 }
-.nb-thumb {
-  width: 100px;
-  height: auto;
-  cursor: pointer;
-  border: 2px solid transparent;
+.nb-thumb-wrapper{
+  width: 95px;
+  height: 95px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 5px 0 0;
   transition: border-color 0.3s;
-  pointer-events: auto;
+  margin-top: 10px;
+  border: 2px #dbdbdb solid;
+  border-radius: 10px;
+  cursor: pointer;
 }
-.nb-thumb:hover {
-  transform: translateY(-1px);
-  
+
+.nb-thumb {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.nb-thumb-wrapper:hover {
+  transform: translateY(-3px);
+  border: #515151c0 3px solid;
 }
 
 /* Правая колонка: текст, список, ссылка и кнопки */
@@ -2452,12 +2492,16 @@ margin-bottom: 10px;
   flex: 1;
 }
 .nb-title {
-  font-size: 28px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 30px;
   margin-bottom: 10px;
   color: #333;
 }
 .nb-text {
-  font-size: 16px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 20px;
   margin-bottom: 15px;
   color: #555;
 }
@@ -2466,14 +2510,44 @@ margin-bottom: 10px;
   padding: 0;
   margin-bottom: 15px;
 }
+
+.nb-list ul.no-bullets {
+  list-style: none; /* удаляет маркеры */
+  margin: 0;
+  padding: 0;
+}
+
 .nb-list li {
+  font-family: var(--font-roboto);
+  font-weight: normal;
   position: relative;
-  padding-left: 30px;
-  margin-bottom: 8px;
-  font-size: 16px;
+  padding-left: 32px;
+  margin-bottom: 10px;
+  font-size: 15px;
   color: #555;
 }
-.nb-list li::before {
+
+.no-bullets li{
+  margin-top: 5px;
+  padding-left: 20px;
+  position: relative;
+  list-style: none;
+}
+
+.no-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 8px;   /* уменьшенный размер, например, 10px вместо 15px */
+  height: 8px;
+  margin-bottom: 10px;
+  background-color: rgb(53, 141, 200);
+  border-radius: 50%;
+}
+
+.nb-list > li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -2481,8 +2555,12 @@ margin-bottom: 10px;
   transform: translateY(-50%);
   width: 15px;
   height: 15px;
-  background-color: #007BFF;
+  background-color: rgb(59, 161, 228);
   border-radius: 50%;
+}
+
+.nb-list ul li::before {
+  content: none;
 }
 
 /* Ссылка для скачивания драйверов */
@@ -2494,17 +2572,21 @@ margin-bottom: 10px;
   text-decoration: none;
   margin-bottom: 20px;
 }
+.nb-download-link:hover{
+  color: #0063cd;
+}
+
 .nb-download-icon {
   display: inline-block;
   width: 24px;
   height: 24px;
   line-height: 24px;
   text-align: center;
-  background-color: #007BFF;
+  background-color: rgb(59, 161, 228);
   color: #fff;
   border-radius: 50%;
   font-size: 14px;
-  margin-right: 8px;
+  margin: 10px 8px 10px 0;
 }
 
 /* Кнопки */
@@ -2520,15 +2602,33 @@ margin-bottom: 10px;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 .nb-btn-buy {
-  background-color: #007BFF;
+  border: 2px solid #1888ff;
+  background-color: #1888ff;
   color: #fff;
 }
+.nb-btn-buy:hover{
+  transform: scale(1.05);
+  transition: all 0.4s ease;
+  border: 2px solid #1888ff;
+  background-color: #ffffff;
+  color: #2a2a2a;
+}
+
 .nb-btn-brochure {
-  background-color: #ccc;
-  color: #333;
+  border: 2px solid #919191;
+  background-color: #919191;
+  color: #ffffff;
+}
+
+.nb-btn-brochure:hover{
+  transform: scale(1.05);
+  transition: all 0.4s ease;
+  border: 2px solid #919191;
+  background-color: #ffffff;
+  color: #2a2a2a;
 }
 
 /* Адаптивность: на узких экранах колонки выстраиваются в столбик */
@@ -2550,5 +2650,158 @@ margin-bottom: 10px;
   .nb-btn {
     font-size: 14px;
     padding: 8px 16px;
+  }
+}
+
+/* следующий блок */
+/* Контейнер всего блока */
+.tab-container {
+  max-width: 1200px;
+  margin: 50px auto; /* Вы можете настроить верхний отступ по необходимости */
+  padding: 0 20px;
+}
+
+/* Заголовки переключателей */
+.tab-headers {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-header {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* Исходный цвет текста (черный) */
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.tab-header:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Активная вкладка: меняем цвет и добавляем нижнее подчеркивание */
+.tab-header.active {
+  color: #0077ff;
+}
+
+.tab-header.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 3px;
+  background-color: #0077ff;
+  border-radius: 2px;
+}
+
+/* Контейнер вкладок */
+.tab-content {
+  position: relative;
+}
+
+/* Скрываем все вкладки по умолчанию */
+.tab-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Активная вкладка отображается */
+.tab-panel.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Респонсивное видео (вкладка "Обзор") */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* Соотношение 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Контейнер карточек для "Расходных материалов" */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Карточки – их размеры можно подправить по необходимости */
+.card {
+  flex: 1;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Опционально: эффект при наведении на карточку */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  /* Уменьшаем паддинги и размеры в контейнере вкладок */
+  .tab-container {
+    padding: 0 10px;
+    margin: 30px auto;
+  }
+  
+  .tab-headers {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .tab-header {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  
+  .tab-header:not(:last-child) {
+    margin-right: 0;
+  }
+  
+  /* Вкладки с видео обычно занимают всю ширину, так что ничего менять не нужно */
+  
+  /* Карточки в блоке "Расходные материалы" располагаем по вертикали */
+  .cards {
+    flex-direction: column;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .card:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* При очень маленьких экранах можно дополнительно уменьшить размеры */
+@media (max-width: 480px) {
+  .tab-header {
+    font-size: 14px;
+    padding: 6px 10px;
   }
 }

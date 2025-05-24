@@ -1,28 +1,59 @@
-// Переключение главного изображения по клику на миниатюры
 document.addEventListener('DOMContentLoaded', function() {
-  // Находим контейнер с миниатюрами
   var thumbnailsContainer = document.querySelector('.nb-thumbnails');
   if (!thumbnailsContainer) {
     console.error('Элемент с классом .nb-thumbnails не найден!');
     return;
   }
 
-  // Навешиваем обработчик клика на контейнер (делегирование событий)
   thumbnailsContainer.addEventListener('click', function(event) {
     if (event.target && event.target.classList.contains('nb-thumb')) {
-      // Получаем URL большого изображения из data-large
       var largeSrc = event.target.getAttribute('data-large');
-      
-      // Находим элемент главного изображения и обновляем src
-      var mainImage = document.getElementById('nbMainImage');
-      if (mainImage) {
-        mainImage.src = largeSrc;
+      var $mainImage = $('#nbMainImage');
+      var $slider = $('.nb-slider');
+
+      // Проверяем ширину слайдера – если она равна 0, значит стили не применились или контейнер не виден
+      var sliderWidth = $slider.width();
+      console.log("Slider width: " + sliderWidth);
+
+      // Если ширина определена, запускаем анимацию
+      if (sliderWidth > 0) {
+        // Анимация: сдвигаем текущее изображение влево (оно исчезнет за пределами)
+        $mainImage.animate({ left: -sliderWidth }, 300, function() {
+          // Меняем источник изображения и перемещаем его сразу за правую границу контейнера
+          $mainImage.attr('src', largeSrc).css('left', sliderWidth);
+          // Анимация: новое изображение двигается на место, устанавливая left: 0
+          $mainImage.animate({ left: 0 }, 300);
+        });
       } else {
-        console.error('Элемент с id "nbMainImage" не найден!');
+        console.error("Ширина слайдера равна 0. Проверьте стили и размеры контейнера.");
       }
     }
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const headers = document.querySelectorAll('.tab-header');
+  const panels = document.querySelectorAll('.tab-panel');
+  
+  headers.forEach(header => {
+    header.addEventListener('click', function() {
+      // Снимаем класс active со всех заголовков
+      headers.forEach(h => h.classList.remove('active'));
+      // Скрываем все панели
+      panels.forEach(panel => panel.classList.remove('active'));
+      
+      // Добавляем класс active для выбранного заголовка
+      this.classList.add('active');
+      // Получаем идентификатор панели из data-атрибута
+      const tabId = this.getAttribute('data-tab');
+      // Отображаем соответствующую панель
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+});
+
+
 
 // Masonry-сетка
 $(document).ready(function() {

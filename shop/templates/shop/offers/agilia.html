@@ -4,6 +4,7 @@
 {% block title %}Принтер-Agilia{% endblock %}
 
 {% block content %}
+<div class="full-width-banner"></div>
 
 
 <div class="nb-block">
@@ -16,46 +17,111 @@
                alt="Главное изображение" class="nb-main-image" id="nbMainImage">
         </div>
         <div class="nb-thumbnails">
+          <div class="nb-thumb-wrapper">
           <img src="{% static 'img/Agilia/1000x1000 (2).png' %}" class="nb-thumb"
           data-large="{% static 'img/Agilia/1000x1000 (2).png' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
           <img src="{% static 'img/Agilia/1000x1000.png' %}" alt="Thumbnail 2" class="nb-thumb"
           data-large="{% static 'img/Agilia/1000x1000.png' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
           <img src="{% static 'img/Agilia/agilia3.jpg' %}" alt="Thumbnail 3" class="nb-thumb" 
           data-large="{% static 'img/Agilia/agilia3.jpg' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
           <img src="{% static 'img/Agilia/imageAgilia4.webp' %}" alt="Thumbnail 4" class="nb-thumb"
           data-large="{% static 'img/Agilia/imageAgilia4.webp' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
           <img src="{% static 'img/Agilia/1000x1000 (1).png' %}" alt="Thumbnail 4" class="nb-thumb"
           data-large="{% static 'img/Agilia/1000x1000 (1).png' %}">
+          </div>
         </div>
       </div>
 
       <!-- Правая колонка: Текст и управление -->
       <div class="nb-right">
-        <h2 class="nb-title">Заголовок блока</h2>
-        <p class="nb-text">
-          Это описание блока, где разъясняются преимущества и особенности предлагаемого продукта или услуги.
-        </p>
+        <h2 class="nb-title">Карточные принтеры Agilia</h2>
+        <h3 class="nb-text">
+          Высококачественная печать на картах всех типов
+        </h3>
         <ul class="nb-list">
-          <li>Пункт 1 описания</li>
-          <li>Пункт 2 описания</li>
-          <li>Пункт 3 описания</li>
-          <li>Пункт 4 описания</li>
-          <li>Пункт 5 описания</li>
-          <li>Пункт 6 описания</li>
-          <li>Пункт 7 описания</li>
-          <li>Пункт 8 описания</li>
-          <li>Пункт 9 описания</li>
-        </ul>
-        <a href="#" class="nb-download-link">
+          <li>Технология ретрансферной печати, оптимальный уровень безопасности  для любых карт, качество печати </li>
+          <li>Печатающий модуль для односторонней или двусторонней печати, идеальная печать на краях оптимизация качества 
+            печати посредством цветового профиля</li>
+          <li>Печатная головка с разрешением 600 точек на дюйм (23,6 точек/мм), пользовательский интерфейс: сенсорный дисплей 
+            диагональю 3,5 дюйма</li>
+          <li>Скорость печати : односторонняя печать (YMCK): 150 карт/час - двусторонняя печать (YMCKK): 100 карт/час
+          </li>
+          <li>Безопасноть: разъем замка безопасности Kensington®, модуль блокировки доступа к пустым картам, ленте и пленке 
+            (дополнительная функция), удаление конфиденциальных данных из памяти принтера</li>
+          <li>Функции, интегрируемые по месту: ключ активации двусторонней печати,  модули кодирования, модуль ламинирования</li>
+          <li>
+            Гарантийные условия:
+          </ul>
+          <ul class="no-bullets">
+            <li>3 года для принтера, на протяжении всего срока службы для печатающей головки.</li>
+            <li>Дополнительно может предоставляться продленная гарантия.</li>
+          </ul>
+        <a href="https://myplace.evolis.com/s/product/agilia/01t5p00000CuIrUAAV?language=ru&tabset-100fe=2" class="nb-download-link">
           <span class="nb-download-icon">i</span> Скачать драйвера для принтера
         </a>
         <div class="nb-buttons">
-          <button class="nb-btn nb-btn-buy">Купить товар</button>
+          <a href="https://t.me/alisherAcube"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
           <a href="brochure.pdf" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
         </div>
       </div>
       
     </div>
   </div>
+
+<!-- Следующий блок -->
+<!-- Блок переключения контента -->
+<div class="tab-container">
+  <!-- Заголовки для переключения -->
+  <div class="tab-headers">
+    <div class="tab-header active" data-tab="overview">Обзор</div>
+    <div class="tab-header" data-tab="consumables">Расходные материалы</div>
+  </div>
+  
+  <!-- Контейнер для вкладок -->
+  <div class="tab-content">
+    <!-- Вкладка "Обзор": встраиваем YouTube видео -->
+    <div class="tab-panel active" id="overview">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    
+    <!-- Вкладка "Расходные материалы": три карточки -->
+    <div class="tab-panel" id="consumables">
+      <div class="cards">
+        <div class="card">
+          <img src="image1.jpg" alt="Изображение 1">
+          <h3>Мини заголовок 1</h3>
+          <p>Описание или текст 1</p>
+        </div>
+        <div class="card">
+          <img src="image2.jpg" alt="Изображение 2">
+          <h3>Мини заголовок 2</h3>
+          <p>Описание или текст 2</p>
+        </div>
+        <div class="card">
+          <img src="image3.jpg" alt="Изображение 3">
+          <h3>Мини заголовок 3</h3>
+          <p>Описание или текст 3</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 {% endblock %}
