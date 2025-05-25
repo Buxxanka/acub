@@ -69,7 +69,7 @@
         </a>
         <div class="nb-buttons">
           <a href="https://t.me/alisherAcube"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
-          <a href="brochure.pdf" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
+          <a href="{% static 'img/Agilia/Brochure-Agilia.pdf' %}" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
         </div>
       </div>
       
@@ -96,27 +96,162 @@
                 allowfullscreen>
         </iframe>
       </div>
+
+     <!-- Блок инфоблоков -->
+    <div class="info-blocks">
+    
+    <!-- Блок 1 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-compact-disc info-icon"></i>
+        <h3 class="info-title">Высококачественная печать на картах всех типов</р>
+      </div>
+      <div class="info-description">
+        <p>Именно это и предлагает технология ретрансферной печати Agilia.</p>
+        <p>Пленка для ретрансферной печати идеально подходит для любых карт и легко <b>адаптируется к различным материалам
+          и техническим характеристикам</b>, <br>при этом она покрывает всю поверхность и дает <b>привлекательный внешний вид.</b></p>
+        <p>Кроме того, благодаря <b>разрешению печати 600 точек на дюйм</b> и возможности регулировки цветности посредством <b>цветового профиля</b> вы получаете прорисовку
+          исключительного качества.
+        </p>
+      </div>
     </div>
+    
+    <!-- Блок 2 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <h3 class="info-title">Оптимальный уровень безопасности для любых карт</h3>
+      </div>
+      <div class="info-description">
+        <p>Agilia предлагает множество возможностей для <b>графической и электронной персонализации,</b> что повышает безопасность карты. Выбор за вами: микротекст, 
+        гильоширование, QR-код высокой четкости и т. д</p>
+        <p>Нужен более высокий уровень защиты? Agilia совместим с <b>модулем ламинирования,</b> предназначенным для нанесения ламинатных пленок, таких как лаковые покрытия 
+        и защитные пленки, как прозрачные, так и с голограммами.</p>
+      </div>
+    </div>
+    
+    <!-- Блок 3 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <span class="info-title">Исключительное качество печати:</span>
+      </div>
+      <div class="info-description">
+        <p>
+          <ul>
+          <li><b>Высочайшее качество печати</b> благодаря использованию технологии ретрансферной печати;</li>
+          <li><b>Печать высокой четкости с разрешением 600 точек на дюйм;</b></li>
+          <li>Регулировка цветности посредством <b>цветового профиля;</b></li>
+          <li>Односторонняя или двусторонняя печать.</li>
+        </ul>
+      </p>
+      </div>
+    </div>
+    
+    <!-- Блок 4 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <span class="info-title">Безопасность и долговечность карт:</span>
+      </div>
+      <div class="info-description">
+        <p>
+          <ul>
+            <li>множество <b>вариантов кодирования;</b></li>
+            <li>печать <b>самых современных элементов безопасности:</b> микротекст, гильоширование, QR-код высокой четкости;</li>
+            <li>электромеханическая система блокировки.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    
+    <!-- Блок 5 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <span class="info-title">Широкий ассортимент расходных материалов</span>
+      </div>
+      <div class="info-description">
+        <p>Расходные материалы Evolis High Trust обеспечивают <b>высококачественную печать и оптимальный срок службы</b> вашего принтера.</p>
+        <p>Благодаря <b>широкому ассортименту карт, лент и комплектов для чистки</b> вы всегда сможете найти именно то, что вам нужно.</p>
+      </div>
+    </div>
+    
+    <!-- Блок 6 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <span class="info-title">Интуитивно понятное использование:</span>
+      </div>
+      <div class="info-description">
+        <p>
+          <ul>
+            <li><b>ЖК-дисплей с дисплеем QR-кодов</b> для получения помощи при эксплуатации;</li>
+            <li>Evolis Premium Suite с пользовательским интерфейсом, оптимизированным для <b>Windows и Mac</b> (Linux по запросу);</li>
+            <li>Аечать со смартфонов и планшетов;</li>
+            <li>Программное обеспечение для персонализации карт</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  
+    </div>
+  </div>
     
     <!-- Вкладка "Расходные материалы": три карточки -->
     <div class="tab-panel" id="consumables">
-      <div class="cards">
-        <div class="card">
-          <img src="image1.jpg" alt="Изображение 1">
-          <h3>Мини заголовок 1</h3>
-          <p>Описание или текст 1</p>
+      <div class="card-products">
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/YMCKO1.png' %}" alt="Изображение 1">
+          <h3>Ленты YMCKO</h3>
+          <p>Можете использовать ленту ACUBE YMCKO для каждой одно-или 2х сторонней печати.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
         </div>
-        <div class="card">
-          <img src="image2.jpg" alt="Изображение 2">
-          <h3>Мини заголовок 2</h3>
-          <p>Описание или текст 2</p>
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/Лента-3.png' %}" alt="Изображение 2">
+          <h3>Чёрная монохромная лента</h3>
+          <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. 
+            Доступные в черном, синем, красном, зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
         </div>
-        <div class="card">
-          <img src="image3.jpg" alt="Изображение 3">
-          <h3>Мини заголовок 3</h3>
-          <p>Описание или текст 3</p>
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/Лента-4.png' %}" alt="Изображение 3">
+          <h3>Белая монохромная лента</h3>
+          <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. Доступные в черном, синем, красном, 
+            зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
+        </div>
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/Лента-5.png' %}" alt="Изображение 3">
+          <h3>Серебрянная монохромная лента</h3>
+          <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. Доступные в черном, синем, красном, 
+            зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
         </div>
       </div>
+
+    <h2 class="section-title">Принтеры</h2>
+    
+    <div class="extra-blocks">
+      <div class="extra-block">
+        <img src="{% static 'img/Badgy/1000x1000.jpg' %}" alt="Дополнительное изображение 1">
+        <h3>Карточный принтер - Badgy200</h3>
+        <p>Доступное решение для печати карт</p>
+        <a href="{% url 'badgy200'%}" class="btn-products">Узнать больше</a>
+      </div>
+      <div class="extra-block">
+        <img src="{% static 'img/Zenius/1000x1000.png' %}" alt="Дополнительное изображение 2">
+        <h3>Компактный и универсальный принтер для карт</h3>
+        <p>Описание блока 2</p>
+        <a href="{% url 'zenius'%}" class="btn-products">Узнать больше</a>
+      </div>
+      <div class="extra-block">
+        <img src="{% static 'img/Primacy2/1.png' %}" alt="Дополнительное изображение 3">
+        <h3>Карточный принтер - Primacy 2</h3>
+        <p>Компендиум технологий для сегодняшнего и завтрашнего дня с карточный принтер Primacy 2.</p>
+        <a href="{% url 'primacy2'%}" class="btn-products">Узнать больше</a>
+      </div>
+    </div>
     </div>
   </div>
 </div>
