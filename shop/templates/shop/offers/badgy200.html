@@ -4,5 +4,249 @@
 {% block title %}Принтер-Badgy200{% endblock %}
 
 {% block content %}
+<div class="full-width-banner"></div>
+
+
+<div class="nb-block">
+    <div class="nb-container">
+      
+      <!-- Левая колонка: Слайдер с миниатюрами -->
+      <div class="nb-left">
+        <div class="nb-slider">
+        <img src="{% static 'img/Badgy/1000x1000.jpg' %}" 
+               alt="Главное изображение" class="nb-main-image" id="nbMainImage">
+        </div>
+        <div class="nb-thumbnails">
+          <div class="nb-thumb-wrapper">
+          <img src="{% static 'img/Badgy/1000x1000.jpg' %}" class="nb-thumb"
+          data-large="{% static 'img/Badgy/1000x1000.jpg' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
+          <img src="{% static 'img/Badgy/1000x1000 (1).jpg' %}" alt="Thumbnail 2" class="nb-thumb"
+          data-large="{% static 'img/Badgy/1000x1000 (1).jpg' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
+          <img src="{% static 'img/Badgy/Badgy-1.png' %}" alt="Thumbnail 3" class="nb-thumb" 
+          data-large="{% static 'img/Badgy/Badgy-1.png' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
+          <img src="{% static 'img/Badgy/Badgy-2.png' %}" alt="Thumbnail 4" class="nb-thumb"
+          data-large="{% static 'img/Badgy/Badgy-2.png' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
+          <img src="{% static 'img/Badgy/Badgy-3.png' %}" alt="Thumbnail 4" class="nb-thumb"
+          data-large="{% static 'img/Badgy/Badgy-3.png' %}">
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая колонка: Текст и управление -->
+      <div class="nb-right">
+        <h2 class="nb-title">Карточные принтеры Badgy 200</h2>
+        <h3 class="nb-text">
+          Быстрый и универсальный карточный принтер
+        </h3>
+        <ul class="nb-list">
+          <li>Технология прямой печати, сублимационная цветная печать/Смолисто-черная термопечать</li>
+          <li>USB 2.0 (совместимость с 1.1 и 3.0), кабель поставляется</li>
+          <li>Безопасность: Отверстие для замка безопасности Kensington®</li>
+          <li>Одностороння печать, печать «в край», Разрешение при печати: 260 x 300 точек на дюйм</li>
+          <li>Скорость печати : односторонняя печать (YMCK): 150 карт/час - двусторонняя печать (YMCKK): 100 карт/час </li>
+          <li>Емкость лотка для подачи: от 25 карт (0,76 мм – 30 мил) до 40 карт (0,50 мм – 20 мил)</li>
+          <li>Цветная печать (YMCKO): 38 сек./карта (95 карт/час)</li>
+          <li>Монохромная печать: 11 сек./карта (325 карт/час)</li>
+          <li>Цветная печать (YMCKO): 38 сек./карта (95 карт/час)</li>
+          <li>Поставляется с Evolis Badge Studio®</li>
+          <li>Гарантийные условия:</li>
+          </ul>
+           <ul class="no-bullets">
+            <li>2 года гарантии на принтер и печатающую головку</li>
+            <li>Продление гарантии по запросу</li>
+          </ul>
+        <a href="https://myplace.evolis.com/s/product/badgy-200/01t5p00000CXScjAAH?language=ru&tabset-100fe=2" class="nb-download-link">
+          <span class="nb-download-icon">i</span> Скачать драйвера для принтера
+        </a>
+        <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% static 'img/Badgy/Brochure-Badgy200.pdf' %}" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- Следующий блок -->
+<!-- Блок переключения контента -->
+<div class="tab-container">
+  <!-- Заголовки для переключения -->
+  <div class="tab-headers">
+    <div class="tab-header active" data-tab="overview">Обзор</div>
+    <div class="tab-header" data-tab="consumables">Расходные материалы</div>
+  </div>
+  
+  <!-- Контейнер для вкладок -->
+  <div class="tab-content">
+    <!-- Вкладка "Обзор": встраиваем YouTube видео -->
+    <div class="tab-panel active" id="overview">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/S1I3prvTu6Y" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+
+     <!-- Блок инфоблоков -->
+    <div class="info-blocks">
+    
+    <!-- Блок 1 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-compact-disc info-icon"></i>
+        <h3 class="info-title">Комплексное решение, экономное и простое в использовании</р>
+      </div>
+      <div class="info-description">
+        <p><b>Badgy200 спроектирован для создания полноцветных бейджей профессионального качества с минимумом усилий.</b></p>
+        <p>Экономичный и простой в использовании, Badgy200 удовлетворит все Ваши потребности в графической персонализации и немедленном выпуске карт 
+            как в единичном экземпляре, так и малыми тиражами.</p>
+        <p>Badgy200 идеален для печати персонализированных карт:</p>
+        <ul class="np-block3-trns-second">
+            <li>бейджи персонала</li>
+            <li>школьные пропуска</li>
+            <li>членские карты</li>
+            <li>карты лояльности</li>
+            <li>бейджи мероприятий</li>
+            <li>бейджи посетителя</li>
+        </ul>
+    </div>
+    </div>
+    
+    <!-- Блок 2 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <h3 class="info-title">Эко-дизайн</h3>
+      </div>
+      <div class="info-description">
+        <p>В рамках концепции Эко-дизайна, направленной на уменьшение воздействия на окружающую среду, компания Evolis:</p>
+        <ul class="np-block3-trns-second">
+            <li>Там, где это возможно, использует в производстве своей продукции <b>переработанные материалы</b></li>
+            <li>Разрабатывает компактные и легкие принтеры, что позволяет добиваться снижения выбросов CO2 при 
+                ранспортировке и упаковке</li>
+            <li><b>Снижает энергопотребление</b> своих принтеров (Директива ErP 2009) благодаря очень экономичному режиму ожидания</li>
+        </ul>
+        <p>Узнайте больше о Badgy200 и обращайтесь за поддержкой на сайт <a href="https://www.badgy.com/">www.badgy.com</a></p>
+      </div>
+    </div>
+    
+    <!-- Блок 3 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <h3 class="info-title">Решение для мгновенного выпуска бейджей</h3>
+      </div>
+      <div class="info-description">
+        <p><b>Комплексное решение</b><br>
+            Badgy представляет собой готовое решение для PC или MAC, состоящее из карт-принтера, программного обеспечения 
+            для персонализации карт Evolis Badge Studio® и комплекта расходных материалов на 100 отпечатков (цветная лента и чистые 
+            пластиковые карты). <br>
+            Кроме того, на <a href="https://www.badgy.com/">www.badgy.com</a> доступна библиотека бесплатных шаблонов карт в которые Вы можете добавить текст, лого, фото,
+            штрихкоды и т.п.
+        </p>
+        <p><b>Печать по запросу</b><br>
+            Badgy200 позволяет мгновенно и абсолютно независимо отпечатать Ваши карты. Печатайте бейджи когда и как вам необходимо: 
+            от одной карты до небольших тиражей.
+        </p>
+        <p><b>Экономия времени</b><br>
+        Badgy200 может печатать со скоростью до 95 полноцветных карт в час. Вы можете импортировать информацию из баз данных в макеты 
+        Ваших карт и запускать печать бейджей с переменными данными одним кликом.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Блок 4 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <h3 class="info-title">Удобный, компактный и профессиональный</h3>
+      </div>
+      <div class="info-description">
+        <p><b>Имидж</b><br>
+        Badgy200 поможет Вам подчеркнуть имидж Вашей компании. Он печатает карты «в край» с профессиональным качеством.
+        </p>
+        <p><b>Простота использования</b>
+        Badgy200 устанавливается и используется как обычный офисный принтер. Подающий и приемные лотки расположены на лицевой стороне принтера. <br>
+        Программное обеспечение Badgy Premium Suite позволяет легко контролировать принтер с Вашего компьютера с помощью получаемых сообщений. <br>
+        Ленты Badgy легко устанавливаются и автоматически определяются принтером.
+        </p>
+        <p><b>Компактность</b><br>
+        Badgy200 занимает площадь меньше, чем лист А4, что позволяет вписать его в любое рабочее пространство. Благодаря небольшому весу (1,7 кг), а также 
+        переносной сумке (опция), принтер можно легко переносить.
+        </p>
+      </div>
+    </div>
+  
+    </div>
+  </div>
+    
+    <!-- Вкладка "Расходные материалы": три карточки -->
+    <div class="tab-panel" id="consumables">
+      <div class="card-products">
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/YMCKO1.png' %}" alt="Изображение 1">
+          <h3>Ленты YMCKO</h3>
+          <p>Можете использовать ленту ACUBE: YMCKO для каждой одно-или 2х сторонней печати.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
+        </div>
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/Лента-3.png' %}" alt="Изображение 2">
+          <h3>Чёрная монохромная лента</h3>
+          <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. 
+            Доступные в черном, синем, красном, зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
+        </div>
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/Лента-4.png' %}" alt="Изображение 3">
+          <h3>Белая монохромная лента</h3>
+          <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. Доступные в черном, синем, красном, 
+            зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
+        </div>
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/Лента-5.png' %}" alt="Изображение 3">
+          <h3>Серебрянная монохромная лента</h3>
+          <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. Доступные в черном, синем, красном, 
+            зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
+        </div>
+      </div>
+
+    <h2 class="section-title">Принтеры</h2>
+    
+    <div class="extra-blocks">
+      <div class="extra-block">
+        <img class="agilia" src="{% static 'img/Agilia/1000x1000 (1).png' %}" alt="Дополнительное изображение 1">
+        <h3>Принтер для печати ретрансферных карт - Agilia</h3>
+        <p>Высококачественная печать на картах всех типов.</p>
+        <a href="{% url 'agilia'%}" class="btn-products">Узнать больше</a>
+      </div>
+      <div class="extra-block">
+        <img class="zenius" src="{% static 'img/Zenius/1000x1000.png' %}" alt="Дополнительное изображение 2">
+        <h3>Карточный принтер Zenius</h3>
+        <p>Компактный и универсальный принтер для карт</p>
+        <a href="{% url 'zenius'%}" class="btn-products">Узнать больше</a>
+      </div>
+      <div class="extra-block">
+        <img class="primacy-product" src="{% static 'img/Primacy2/1.png' %}" alt="Дополнительное изображение 3">
+        <h3>Карточный принтер - Primacy 2</h3>
+        <p>Компендиум технологий для сегодняшнего и завтрашнего дня с карточный принтер Primacy 2.</p>
+        <a href="{% url 'primacy2'%}" class="btn-products">Узнать больше</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
 
 {% endblock %}

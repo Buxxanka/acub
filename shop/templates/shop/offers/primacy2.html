@@ -1,8 +1,290 @@
 {% extends "shop/base.html" %}
 {% load static %}
 
-{% block title %}Принтер-Primacy 2{% endblock %}
+{% block title %}Карточный принтер-Primacy 2{% endblock %}
 
 {% block content %}
+<div class="full-width-banner"></div>
+
+
+<div class="nb-block">
+    <div class="nb-container">
+      
+      <!-- Левая колонка: Слайдер с миниатюрами -->
+      <div class="nb-left">
+        <div class="nb-slider">
+        <img src="{% static 'img/Primacy2/1.png' %}" 
+               alt="Главное изображение" class="nb-main-image" id="nbMainImage">
+        </div>
+        <div class="nb-thumbnails">
+          <div class="nb-thumb-wrapper">
+          <img src="{% static 'img/Primacy2/1.png' %}" class="nb-thumb"
+          data-large="{% static 'img/Primacy2/1.png' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
+          <img src="{% static 'img/Primacy2/5.png' %}" alt="Thumbnail 2" class="nb-thumb"
+          data-large="{% static 'img/Primacy2/5.png' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
+          <img src="{% static 'img/Primacy2/pr1-q5.png' %}" alt="Thumbnail 3" class="nb-thumb" 
+          data-large="{% static 'img/Primacy2/pr1-q5.png' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
+          <img src="{% static 'img/Primacy2/pr4-q5.png' %}" alt="Thumbnail 4" class="nb-thumb"
+          data-large="{% static 'img/Primacy2/pr4-q5.png' %}">
+          </div>
+          <div class="nb-thumb-wrapper">
+          <img src="{% static 'img/Primacy2/pr5-q5v.png' %}" alt="Thumbnail 4" class="nb-thumb"
+          data-large="{% static 'img/Primacy2/pr5-q5v.png' %}">
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая колонка: Текст и управление -->
+      <div class="nb-right">
+        <h2 class="nb-title">Карточные принтеры Primacy 2</h2>
+        <h3 class="nb-text">
+          Быстрый и универсальный карточный принтер
+        </h3>
+        <ul class="nb-list">
+          <li>Технология прямой сублимационной цветной печати/Монохромная термотрансферная печать</li>
+          <li>Одностороння печать, печать «в край»</li>
+          <li>Автоматическая или ручная подача</li>
+          <li>Печатающая головка с разрешением 300 точек на дюйм (11,8 точек/мм) </li>
+          <li>Емкость лотка для подачи: 50 карт (0,76 мм – 30 мил), Емкость приемного лотка: 20 карт (толщиной 0,76 мм – 30 мил) </li>
+          <li>Производительность принтера — Односторонняя печать: 150 карт в час, Цветная печать (YMCKO): 120–150 карт/час , 
+            Монохромная печать: 400–500 карт/час</li>
+          <li>Возможность установки двухстороннего ламинатора карт (CLM)</li>
+          <li>Удобство переноски,автоматическая система распознавания ленты и настройка</li>
+          <li>Безопасность: место для замка Kensington®, шифрование данных для одирования магнитной полосы</li>
+          <li>Гарантийные условия:</li>
+          </ul>
+           <ul class="no-bullets">
+            <li>Гарантия 2 года (на принтер и печатающую головку)4</li>
+            <li>Продление гарантии по запросу</li>
+          </ul>
+        <a href="https://myplace.evolis.com/s/product/zenius/01t5p00000CXScQAAX?language=ru&tabset-100fe=2" class="nb-download-link">
+          <span class="nb-download-icon">i</span> Скачать драйвера для принтера
+        </a>
+        <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% static 'img/Zenius/Brochure-Zenius.pdf' %}" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- Следующий блок -->
+<!-- Блок переключения контента -->
+<div class="tab-container">
+  <!-- Заголовки для переключения -->
+  <div class="tab-headers">
+    <div class="tab-header active" data-tab="overview">Обзор</div>
+    <div class="tab-header" data-tab="consumables">Расходные материалы</div>
+  </div>
+  
+  <!-- Контейнер для вкладок -->
+  <div class="tab-content">
+    <!-- Вкладка "Обзор": встраиваем YouTube видео -->
+    <div class="tab-panel active" id="overview">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/eGFAIRRvPYk" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+
+     <!-- Блок инфоблоков -->
+    <div class="info-blocks">
+    
+    <!-- Блок 1 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-compact-disc info-icon"></i>
+        <h3 class="info-title">Удобный для пользователя, компактный и экономный</р>
+      </div>
+      <div class="info-description">
+        <p><b>Принтер Zenius предназначен для односторонней печати и кодировки любого типа пластиковых карт.</b></p>
+        <p>Zenius выполняет цветную и монохромную печать отдельных карт или целых тиражей, гарантируя оптимальный результат.</p>
+        <p>Zenius идеален для мгновенной печати односторонних карт:</p>
+        <ul class="np-block3-trns-second">
+            <li>бейджи сотрудников</li>
+            <li>карты контроля доступа</li>
+            <li>клубные карты</li>
+            <li>карты лояльности / подарочные карты</li>
+            <li>проездные билеты</li>
+        </ul>
+    </div>
+    </div>
+    
+    <!-- Блок 2 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <h3 class="info-title">Эко-дизайн</h3>
+      </div>
+      <div class="info-description">
+        <p>В рамках концепции Эко-дизайна, направленной на уменьшение воздействия на окружающую среду, компания Evolis:</p>
+        <ul class="np-block3-trns-second">
+            <li>Там, где это возможно, использует в производстве своей продукции <b>переработанные материалы</b></li>
+            <li>Разрабатывает компактные и легкие принтеры, что позволяет добиваться снижения выбросов CO2 при 
+                ранспортировке и упаковке</li>
+            <li><b>Снижает энергопотребление</b> своих принтеров (Директива ErP 2009) благодаря очень экономичному режиму ожидания</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Блок 3 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <h3 class="info-title">Компактный, легкий в использовании и профессиональный</h3>
+      </div>
+      <div class="info-description">
+        <p>Профессиональная печать<br>
+            Принтер Zenius обеспечивает профессиональное качество печати благодаря разрешению 300 dpi и печати «в край». Ваши 
+            фотографии, логотипы, штрихкоды и тексты четко наносятся на карты, создавая позитивный имидж бренда Вашей организации.
+        </p>
+        <p><b>Экономия пространства</b><br>
+            Zenius – это концентрация передовых функций на минимальном пространстве. Zenius занимает на столе место лишь 
+            чуть большее, чем лист формата А4.
+        </p>
+        <p>Кроме того, он обеспечивает очень низкий уровень шума — 46 децибел при работе — и, значит, отлично br подойдет к любому 
+            рабочему пространству : офису, ресепшену или кассе.</p>
+        <p><b>Легкость использования</b><br>
+        Zenius был разработан с целью упростить для вас каждый момент его использования! <br>
+    </p>
+    <ul class="np-block3-trns-second">
+        <li>Вы вставляете карты вручную или автоматически и забираете их на лицевой стороне принтера.</li>
+        <li>Набор ПО Evolis Premium Suite® позволяет <b>легко управлять принтером</b> со своего компьютера благодаря 
+            всплывающим уведомлениям.</li>
+        <li>Печатные ленты Evolis High Trust® <b>легко устанавливаются</b> и автоматически распознаются.</li>
+    </ul>
+    <p>
+        Печать по запросу<br>
+        Zenius разработан для оптимизации выпуска карт одиночно или малыми тиражами. Вы также можете печатать карты по требованию. 
+        Этот принтер может напечатать цветную карту всего за 30 секунд и до 150 цветных карт в час. Zenius удовлетворяет все потребности 
+        клиентов в картах, снижая время ожидания.
+    </p>
+      </div>
+    </div>
+    
+    <!-- Блок 4 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <h3 class="info-title">Печать по запросу</h3>
+      </div>
+      <div class="info-description">
+        <p>Zenius разработан для оптимизации выпуска карт одиночно или малыми тиражами. Вы также можете печатать карты по требованию.
+            Этот принтер может напечатать цветную карту всего за 30 секунд и до 150 цветных карт в час. Zenius удовлетворяет 
+            все потребности клиентов в картах, снижая время ожидания.</p>
+      </div>
+    </div>
+
+    <!-- Блок 5 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <h3 class="info-title">Длительное сохранение изображения</h3>
+      </div>
+      <div class="info-description">
+        <p><b>Модификации</b><br>
+            Zenius обеспечивает значительную гибкость в эксплуатации. Этот принтер адаптирован к различным вариантам применения и в 
+            своей версии «Expert» может легко <b>сочетать различные функции кодировки</b> : магнитная полоса, контактный или бесконтактный 
+            чип. Установка этих модулей занимает считанные минуты!
+        </p>
+        <p><b>Долгосрочные инвестиции</b><br>
+            Надежность и эффективность принтера Zenius подтверждены многочисленными тестами качества и соответствия. Вы <b>инвестируете 
+            надолго</b>. Кроме того, <b>Evolis предлагает продление гарантии по запросу,</b> которое поможет Вам <b>чувствовать себя абсолютно 
+            спокойным.</b>
+        </p>
+      </div>
+    </div>
+
+    <!-- Блок 6 -->
+    <div class="info-block">
+      <div class="info-header">
+        <i class="fa-solid fa-bullseye info-icon"></i>
+        <h3 class="info-title">Комплект Zenius GO Pack</h3>
+      </div>
+      <div class="info-description">
+        <p><b>Решение «всё в одном» для создания карточек с использованием информации из баз данных</b><br>
+            Компания Evolis предоставляет новый комплект «всё в одном» для принтеров Zenius.
+        </p>
+        <p>В комплекте Zenius GO Pack есть все необходимое для создания одно- или двухсторонних карточек с использованием имеющихся баз данных:</p>
+        <ul class="np-block3-trns-second">
+            <li>принтер карточек Zenius;</li>
+            <li>программное обеспечение cardPresso XS для создания карточек — возможность подключения к базам данных в форматах Excel, .csv и .txt;</li>
+            <li>цветная лента YMCKO на 200 оттисков;</li>
+            <li>100 карт из ПВХ — 30 мил — 0,76 мм.</li>
+        </ul>
+        <p>Этот комплект является идеально выгодным приобретением!</p>
+      </div>
+    </div>
+  
+    </div>
+  </div>
+    
+    <!-- Вкладка "Расходные материалы": три карточки -->
+    <div class="tab-panel" id="consumables">
+      <div class="card-products">
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/YMCKO1.png' %}" alt="Изображение 1">
+          <h3>Ленты YMCKO</h3>
+          <p>Можете использовать ленту ACUBE: YMCKO для каждой одно-или 2х сторонней печати.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
+        </div>
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/Лента-3.png' %}" alt="Изображение 2">
+          <h3>Чёрная монохромная лента</h3>
+          <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. 
+            Доступные в черном, синем, красном, зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
+        </div>
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/Лента-4.png' %}" alt="Изображение 3">
+          <h3>Белая монохромная лента</h3>
+          <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. Доступные в черном, синем, красном, 
+            зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
+        </div>
+        <div class="card-products-block">
+          <img src="{% static 'img/consumables/Лента-5.png' %}" alt="Изображение 3">
+          <h3>Серебрянная монохромная лента</h3>
+          <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. Доступные в черном, синем, красном, 
+            зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.</p>
+          <a href="" class="download-link">Скачать подробную информацию</a>
+        </div>
+      </div>
+
+    <h2 class="section-title">Принтеры</h2>
+    
+    <div class="extra-blocks">
+      <div class="extra-block">
+        <img class="agilia" src="{% static 'img/Agilia/1000x1000 (1).png' %}" alt="Дополнительное изображение 1">
+        <h3>Принтер для печати ретрансферных карт - Agilia</h3>
+        <p>Высококачественная печать на картах всех типов.</p>
+        <a href="{% url 'agilia'%}" class="btn-products">Узнать больше</a>
+      </div>
+      <div class="extra-block">
+        <img class="badgy" src="{% static 'img/Badgy/1000x1000.jpg'' %}" alt="Дополнительное изображение 2">
+        <h3>Карточный принтер - Badgy200</h3>
+        <p>Доступное решение для печати карт</p>
+        <a href="{% url 'badgy200'%}" class="btn-products">Узнать больше</a>
+      </div>
+      <div class="extra-block">
+        <img class="primacy-product" src="{% static 'img/Primacy2/1.png' %}" alt="Дополнительное изображение 3">
+        <h3>Карточный принтер - Primacy 2</h3>
+        <p>Компендиум технологий для сегодняшнего и завтрашнего дня с карточный принтер Primacy 2.</p>
+        <a href="{% url 'primacy2'%}" class="btn-products">Узнать больше</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
 
 {% endblock %}
