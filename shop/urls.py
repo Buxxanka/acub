@@ -17,7 +17,6 @@ urlpatterns = [
     path('vacation/', views.vacation, name='vacation'),
     path('agilia/', views.agilia, name='agilia'),
     path('badgy200/', views.badgy, name='badgy200'),
-    path('futronicFS80H/', views.futronic, name='futronicFS80H'),
     path('primacy2/', views.primacy, name='primacy2'),
     path('zenius/', views.zenius, name='zenius'),
     path('send-email/', send_email, name='send_email'),

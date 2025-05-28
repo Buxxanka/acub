@@ -63,10 +63,6 @@ def badgy(request):
     """Страница agilia"""
     return render(request, 'shop/offers/badgy200.html', {'page_title': 'badgy'})
 
-def futronic(request):
-    """Страница agilia"""
-    return render(request, 'shop/offers/futronicFS80H.html', {'page_title': 'futronic'})
-
 def primacy(request):
     """Страница agilia"""
     return render(request, 'shop/offers/primacy2.html', {'page_title': 'primacy'})

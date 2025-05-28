@@ -27,7 +27,10 @@
         <p>Принтер для ретрансферных карт Agilia: высочайшее качество печати и оптимальная безопасность для всех ваших карт. 100% сделано в Evolis.
             Высококачественная печать на картах всех типов.
         </p>
-        <a href="{% url 'agilia'%}" class="btn-products">Узнать больше</a>
+        <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube" target="_blank"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% url 'agilia'%}" target="_blank"><button class="nb-btn nb-btn-buy ">Узнать больше</button></a>
+        </div>
       </div>
       <!-- Блок 2 -->
       <div class="block">
@@ -35,8 +38,12 @@
         <h3>Карточный принтер - Badgy200</h3>
         <p>Badgy200 — это комплексное решение, экономичное и простое в использовании, которое удовлетворит все ваши потребности в графической 
             персонализации и мгновенном производстве карт, как поштучно, так и небольшими партиями.</p>
-        <a href="{% url 'badgy200'%}" class="btn-products">Узнать больше</a>
+        <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube" target="_blank"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% url 'badgy200'%}" target="_blank"><button class="nb-btn nb-btn-buy">Узнать больше</button></a>
+        </div>
       </div>
+
       <!-- Блок 3 -->
       <div class="block">
         <img class="primacy" src="{% static 'img/Primacy2/1.png' %}" alt="Изображение 3">
@@ -44,8 +51,12 @@
         <p>Компендиум технологий для сегодняшнего и завтрашнего дня с карточный принтер Primacy 2. 
             Легко создавайте собственные карты с необходимым уровнем безопасности.От самых простых до самых надежных карт, Primacy 2 — это оптимальное решение.
         </p>
-        <a href="{% url 'primacy2'%}" class="btn-products">Узнать больше</a>
+        <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube" target="_blank"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% url 'primacy2'%}" target="_blank"><button class="nb-btn nb-btn-buy">Узнать больше</button></a>
+        </div>
       </div>
+
       <!-- Блок 4 -->
       <div class="block">
         <img class="zenius" src="{% static 'img/Zenius/1000x1000.png' %}" alt="Изображение 4">
@@ -53,7 +64,10 @@
         <p>Ориентированный на пользователя, Zenius является компактным и экономичным решением для выпуска персонализированных карт.
             Простой в освоении и использовании принтер Zenius является компактным и экономичным решением для выпуска персональных карт.
         </p>
-        <a href="{% url 'zenius'%}" class="btn-products">Узнать больше</a>
+         <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube" target="_blank"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% url 'zenius'%}" target="_blank"><button class="nb-btn nb-btn-buy">Узнать больше</button></a>
+        </div>
       </div>
     </div>
   </div>
@@ -63,47 +77,52 @@
     <h1 class="main-heading main-heading-consumables">Расходники</h1>
     <div class="grid-container">
       <!-- Блок 1 -->
-      <div class="block">
-        <img class="agilia" src="{% static 'img/Agilia/1000x1000 (1).png' %}" alt="Изображение 1">
-        <h3>Принтер для печати ретрансферных карт - Agilia </h3>
-        <p>Принтер для ретрансферных карт Agilia: высочайшее качество печати и оптимальная безопасность для всех ваших карт. 100% сделано в Evolis.
-            Высококачественная печать на картах всех типов.
+      <div class="block ">
+        <img class="consumables-img" src="{% static 'img/consumables/Лента-3.png' %}" alt="Изображение 1">
+        <h3>Чёрная монохромная лента</h3>
+        <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. 
+            Доступные в черном, синем, красном, зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.
         </p>
-        <a href="#" class="btn-products">Узнать больше</a>
+         <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube" target="_blank"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% static 'img/consumables/Монохромные-ленты.pdf' %}" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
+        </div>
       </div>
+
       <!-- Блок 2 -->
       <div class="block">
-        <img class="badgy" src="{% static 'img/Badgy/1000x1000.jpg' %}" alt="Изображение 2">
-        <h3>Карточный принтер - Badgy200</h3>
-        <p>Badgy200 — это комплексное решение, экономичное и простое в использовании, которое удовлетворит все ваши потребности в графической 
-            персонализации и мгновенном производстве карт, как поштучно, так и небольшими партиями.</p>
-        <a href="#" class="btn-products">Узнать больше</a>
+        <img class="consumables-img" src="{% static 'img/consumables/Лента-4.png' %}" alt="Изображение 2">
+        <h3>Белая монохромная лента</h3>
+        <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. Доступные в черном, синем, красном, 
+            зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.</p>
+        <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% static 'img/consumables/Монохромные-ленты.pdf' %}" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
+        </div>
       </div>
+
       <!-- Блок 3 -->
       <div class="block">
-        <img class="primacy" src="{% static 'img/Primacy2/1.png' %}" alt="Изображение 3">
-        <h3>Карточный принтер - Primacy 2</h3>
-        <p>Компендиум технологий для сегодняшнего и завтрашнего дня с карточный принтер Primacy 2. 
-            Легко создавайте собственные карты с необходимым уровнем безопасности.От самых простых до самых надежных карт, Primacy 2 — это оптимальное решение.
+        <img class="consumables-img" src="{% static 'img/consumables/Лента-5.png' %}" alt="Изображение 3">
+        <h3>Серебрянная монохромная лента</h3>
+        <p>Стандартные монохромные ленты Evolis High Trust® специально разработаны для обеспечения оптимального качества печати. Доступные в черном, синем, красном, 
+            зеленом, белом, золотистом и серебристом цветах, они используются для печати одного цвета на карточках.
         </p>
-        <a href="#" class="btn-products">Узнать больше</a>
+         <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube" target="_blank"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% static 'img/consumables/Монохромные-ленты.pdf' %}" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
+        </div>
       </div>
+
       <!-- Блок 4 -->
       <div class="block">
-        <img class="zenius" src="{% static 'img/Zenius/1000x1000.png' %}" alt="Изображение 4">
-        <h3>Карт-принтер - Zenius</h3>
-        <p>Ориентированный на пользователя, Zenius является компактным и экономичным решением для выпуска персонализированных карт.
-            Простой в освоении и использовании принтер Zenius является компактным и экономичным решением для выпуска персональных карт.
-        </p>
-        <a href="#" class="btn-products">Узнать больше</a>
-      </div>
-      <!-- Блок 5 -->
-      <div class="block">
-        <img class="futronic" src="{% static 'img/Futronic/futronic.jpg' %}" alt="Изображение 5">
-        <h3>Дактилоскопический сканер отпечатка пальца Futronic FS80H </h3>
-        <p>Futronic FS80H - оптический сканер отпечатков пальцев, использующий передовые технологии CMOS-матрицы и высокоточные оптические системы 
-        для получения качественного изображения отпечатка пальца. Палец сканируется через стеклянное окно толщиной 14 мм.</p>
-        <a href="#" class="btn-products">Узнать больше</a>
+        <img class="consumables-img" src="{% static 'img/consumables/YMCKO1.png' %}" alt="Изображение 4">
+        <h3>Ленты YMCKO</h3>
+        <p>Можете использовать ленту ACUBE: YMCKO для каждой одно-или 2х сторонней печати.</p>
+         <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube" target="_blank"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% static 'img/consumables/Монохромные-ленты.pdf' %}" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
+        </div>
       </div>
     </div>
   </div>
@@ -118,7 +137,10 @@
         <h3>Дактилоскопический сканер отпечатка пальца Futronic FS80H </h3>
         <p>Futronic FS80H - оптический сканер отпечатков пальцев, использующий передовые технологии CMOS-матрицы и высокоточные оптические системы 
         для получения качественного изображения отпечатка пальца. Палец сканируется через стеклянное окно толщиной 14 мм.</p>
-        <a href="{% url 'futronicFS80H'%}" class="btn-products">Узнать больше</a>
+         <div class="nb-buttons">
+          <a href="https://t.me/alisherAcube" target="_blank"><button class="nb-btn nb-btn-buy">Купить товар</button></a>
+          <a href="{% static 'img/Futronic/Futronic FS80H-broshure.pdf' %}" class="nb-btn nb-btn-brochure" target="_blank">Скачать брошюру</a>
+        </div>
       </div>
     </div>
   </div>

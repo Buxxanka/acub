@@ -1187,8 +1187,7 @@ body{
     /* Базовый стиль блока */
     .block {
       background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
+      border-radius: 20px;
       overflow: hidden;
       padding: 20px; 
       display: flex;
@@ -1209,10 +1208,11 @@ body{
       margin-bottom: 10px; 
     }
 
+
 .badgy{margin: 20px auto 30px auto !important;}
 .primacy{
   margin: 15px auto 20px auto !important;
-  width: 110% !important;
+  width: 100% !important;
 }
 .zenius{
   width: 80% !important;
@@ -2739,7 +2739,7 @@ margin-bottom: 10px;
 /* Респонсивное видео (вкладка "Обзор") */
 .video-wrapper {
   position: relative;
-  padding-bottom: 50%; 
+  padding-bottom: 54%; 
   height: 0;
   overflow: hidden;
 }
@@ -2804,7 +2804,7 @@ margin-bottom: 10px;
   color: #000000;
 }
 
-.card-products-block a.download-link {
+.download-link {
   font-family: var(--font-montserrat);
   margin-top: auto;
   text-decoration: underline; 
@@ -2820,7 +2820,7 @@ margin-bottom: 10px;
 }
 
 
-.card-products-block a.download-link::after {
+.download-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -2832,8 +2832,11 @@ margin-bottom: 10px;
   transform-origin: left;
   transition: transform 0.3s ease;
 }
+.download-link:hover{
+  color: #005eca;
+}
 
-.card-products-block a.download-link:hover::after {
+.download-link:hover::after {
   transform: scaleX(1);  
 }
 
@@ -2951,9 +2954,6 @@ margin-bottom: 10px;
   color: #090909;
 }
 
-.info-description li,p > b{
-  /* color: #353535; */
-}
 
 .info-description p > a{color: #007BFF;}
 .info-description p > a:hover{color: #004b9b;}
@@ -2988,6 +2988,9 @@ margin-bottom: 10px;
   color: #0077ff;   
 }
 
+.consumables-img{
+  border-radius: 50px;
+}
 
 /* Существующие адаптивные стили для переключателей */
 @media (max-width: 768px) {
