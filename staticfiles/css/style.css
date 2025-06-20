@@ -1,0 +1,3054 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --link-color: rgb(57, 147, 208);
+  --link-color-hover: rgba(57, 148, 208, 0.726);
+  --font-roboto: font-family: 'Roboto', sans-serif; 
+  --font-montserrat:font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+ 
+.carousel-title{
+  font-size: 42px;
+  color: #fff;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: var(--font-montserrat);
+}
+
+.carousel-title h1,
+.carousel-title h2 {
+  white-space: normal; /* если заголовок состоит из нескольких слов */
+}
+
+.carousel-inner p {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
+  color: #fff;
+  white-space: normal; /* чтобы текст мог переноситься */
+}
+
+/* Контейнер квадратов — располагаем их абсолютным позиционированием внутри слайда */
+/* Контейнер для квадратов – располагается вертикально по вашим настройкам */
+.slider-squares {
+  position: absolute;
+  top: 160px;              /* Отступ сверху – корректируйте по макету */
+  left: 740px;             /* Отступ слева */
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+  z-index: 10;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+
+/* Общие стили для ссылок в контейнере (вертикальное расположение по умолчанию) */
+.slider-squares a {
+  display: flex;
+  flex-direction: column; /* Элементы размещаются один под другим */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  border: 0.5px solid rgba(255,255,255,0.27);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* Стили для первого квадрата */
+.square {
+  width: 330px;
+  height: 120px;   /* При необходимости можно увеличить высоту, если текста много */
+  padding: 10px;
+}
+
+/* Модификаторы для разных типов квадратов (если применимо) */
+.square-target   { height: 190px !important; }
+.square-chill    { height: 180px !important; }
+.square-medical  { height: 165px !important; }
+.square-school   { height: 150px !important; }
+.square-build    { height: 160px !important; }
+.square-car      { height: 140px !important; }
+
+/* Стили для квадратного элемента с номером */
+.square-number {
+  width: 330px;
+  height: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square-number span {
+  color: #fff;
+}
+
+/* --- Новый блок: Верхняя часть с заголовком и иконкой --- */
+.square-top {
+  display: flex;
+  flex-direction: row;       /* Заголовок и иконка идут в ряд */
+  align-items: center;        /* Выравнивание по базовой линии */
+  justify-content: flex-start;/* Выравнивание по левому краю */
+  gap: 10px;                /* Пространство между заголовком и иконкой */
+  width: 100%;
+  text-align: left; 
+  margin-bottom: 5px;       /* Отступ между верхней частью и описанием */
+}
+
+/* Заголовок */
+.square-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Иконка в верхней части */
+.square-top i {
+  font-size: 30px;
+  color: #ffffff;
+  margin: 0 5px 0 5px;
+}
+
+.icon-hotel{
+  font-size: 38px !important;
+  margin-right: 5px !important;
+}
+
+/* --- Блок с описанием (находится ниже) --- */
+.square-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px ;
+  line-height: 1.2;
+  color: #ffffff;
+  white-space: normal;
+  text-align: left;
+  width: 100%;
+  margin-top: 8px;
+  padding-left: 10px;
+}
+
+/* Hover-эффект для квадратов */
+.square:hover,
+.square-number:hover {
+  background-color: #ffffff;
+  transform: scale(1.02);
+}
+.square:hover i,
+.square:hover .square-title,
+.square:hover .square-desc,
+.square-number:hover span {
+  color: rgb(80, 80, 80);
+}
+
+.text-uppercase{
+  border-radius: 8px;
+}
+
+.text-uppercase:hover{
+  color: rgb(46, 46, 46) !important;
+  transform: scale(1.03);
+  transition: all 0.4s ease;
+}
+
+
+
+
+/* Контейнер логотипа */
+.logo {
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 5px;
+  }
+
+  
+  /* Ссылка-обертка логотипа — используем inline-flex для более «плотного» обтекания,
+     отключаем перенос и убираем лишние пробелы */
+  .logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    text-decoration: none; /* исправлено с неверного nowrap */
+    gap: 10px;
+    /* Убираем фиксированную минимальную ширину, которая могла бы приводить к нежелательному перепаду */
+    /* min-width: 300px; */
+  }
+  
+  .logo-icon{
+    height: auto;
+    width: 60px;
+    margin-bottom: 25px;
+    margin-right: 10px;
+  }
+  
+  /* Текст логотипа ACUB */
+  .logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #17bed2;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 0 10px 0 0; /* отступ справа */
+    padding: 0;
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0 5px 0 -5px;
+    padding: 0;
+  }
+  
+  /* Эффект при наведении на текст логотипа */
+  .logo-text:hover {
+    color: #19e4fc;
+    transform: translateY(5px);
+  }
+  
+  
+  .desc-line{
+    color: rgb(218, 218, 218);
+  }
+  
+  .header.scrolled .desc-line {
+    color: rgb(81, 81, 81);
+  }
+  
+  .header-tiltle a{
+    font-size: 15px !important;
+  }
+
+  .text-uppercase{
+    color: #ffffff !important;
+    margin-left: 0px !important;
+  }
+
+  /* Адаптивное изменение для экранов до 768px */
+  @media (max-width: 768px) {
+    .logo-text {
+      font-size: 36px;
+      margin: 0 4px 0 -4px;
+    }
+    .logo-divider {
+      font-size: 36px;
+      margin: 0 2px;
+      transform: scaleX(0.5);
+    }
+    .logo-description {
+      font-size: 14px;
+      margin-top: -4px;
+    }
+  }
+  
+/* Стили для блока Testimonials */
+
+/* Общие стили секции */
+.content-lg.container{
+  padding: 40px 20px;
+  padding-bottom: 0px;
+}
+
+
+/* Стили для слайдов */
+.swiper-slide{
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  cursor: grab;
+  overflow: hidden;
+  min-height: 500px;
+  /* padding: 20px; */
+  margin-bottom: -20px;
+  
+}
+
+.swiper-slide,
+.blockquote {
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+/* При активном клике меняем курсор на схваченный */
+.swiper-slide:active{
+  cursor: grabbing;
+}
+
+/* Стили заголовка внутри слайда */
+.swiper-slide h2{
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Стили блоков отзыва */
+.blockquote {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  background: transparent;
+  padding: 15px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.blockquote-caption{
+  display: flex;
+  align-items: baseline; /* Выровняет элементы по базовой линии шрифта */
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.blockquote:before{content: "";}
+
+/* Контейнер для текста отзыва */
+.blockquote-content{
+  flex: 1;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Отступы для параграфов */
+.blockquote-text{
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Контейнер для изображения отзыва */
+.blockquote-image{
+  position: relative;
+  flex-shrink: 0;
+  width: 250px;
+}
+
+/* Само изображение + тень под фото  */
+.blockquote-image img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 8px;
+  -webkit-box-shadow: -22px 22px 4px 2px rgba(28, 28, 28, 0.65);
+  -moz-box-shadow: -22px 22px 4px 2px rgba(28, 28, 28, 0.65);
+  box-shadow: -22px 22px 4px 2px rgba(28, 28, 28, 0.65);
+}
+
+.blockquote-image::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #84292937;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.image-office{
+  margin-right: 240px;
+  margin-bottom: 30px;
+  width: 320px;
+  height: 100%;
+}
+
+.image-robot{
+  margin-right: 100px;
+  width: 550px;
+  height: 100%;
+}
+
+.image-card{
+  margin-right: 150px;
+  width: 480px;
+  height: 100%;
+}
+
+.slide-counter{
+  width: 80px;
+  height: 40px;
+  background-color: #fff ;
+  border: 1px solid #333333dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333dd;
+  margin: 0;
+  -webkit-box-shadow: 0px 1px 45px -74px rgba(34, 60, 80, 0.31) inset;
+  -moz-box-shadow: 0px 1px 45px -74px rgba(34, 60, 80, 0.31) inset;
+  box-shadow: 0px 1px 45px -74px rgba(34, 60, 80, 0.31) inset;
+  margin: 0;
+  align-self: flex-start;
+  }
+
+.swiper-testimonials-pagination{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.swiper-testimonials-pagination .swiper-pagination-bullet{
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  opacity: 1;
+  margin: 0 4px;
+}
+
+.swiper-testimonials-pagination .swiper-pagination-bullet-active{
+  background: #333;
+}
+
+
+/* Блок с Latest Products */
+/* Заголовок секции */
+.row.margin-b-40 h2{
+  font-size: 28px;
+  color: #333;
+  margin-bottom: -10px;
+  text-align: left;
+}
+
+/* Переопределяем стандартный Bootstrap для карточек,
+   чтобы все они располагались в одну строку и имели одинаковую ширину */
+.latest-products-row{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  height: 500px;
+}
+
+/* Переопределяем ширину колонок */
+.latest-products-row > [class*="col-"]{
+  flex: 0 0 calc(20% - 10px);
+  max-width: calc(20%-10px);
+  height: 500px;
+  background-color: #ffffff95;
+  transform: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.latest-products-row > [class*="col-"]:hover{
+  transform: translateY(1px);
+  -webkit-box-shadow: 0px -7px 0px 0px rgba(34, 60, 80, 0.48);
+  -moz-box-shadow: 0px -7px 0px 0px rgba(34, 60, 80, 0.48);
+  box-shadow: 0px -7px 0px 0px rgba(34, 60, 80, 0.48);
+}
+
+/* Стили изображений */
+.img-responsive{
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0;
+}
+
+
+/* Остальные стили для заголовков, параграфов  */
+
+.kart h4{
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700;
+  text-align: left;
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+
+.text-uppercases {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-left: 10px;
+  color: #777;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.kart p{
+  font-family: var(--font-roboto) !important;
+  font-weight: normal !important;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #454545;
+  margin: 10px 0;
+}
+
+.kart a.link{
+  font-size: 14px;
+  color: rgb(57, 147, 208);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.kart a.link:hover{
+  color: rgba(57, 148, 208, 0.726);
+}
+
+/* Стили для  Service */
+/* Заголовок для раздела "Сферы применения" */
+.service-section-title{
+  font-size: 30px;
+  font-weight: 500;
+  color: #424242;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Немного уменьшаем вертикальные отступы у всего блока Service */
+.bg-color-sky-light {
+  padding: 40px 0;
+}
+
+/* Стили для блока Service */
+.service{
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  min-height: 320px;
+}
+
+/* Эффект при наведении: карточка поднимается (на 3px) и появляется легкая тень */
+.service:hover{
+  transform: translateY(2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Отключаем действие ссылок внутри блока service */
+.service a.content-wrapper-link{
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+/* Стили заголовка внутри блока service */
+.servce-info h4{
+  font-size: h4;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif ;
+  color: #222;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* Стили параграфа внутри блока service */
+.servce-info p{
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  text-align: left;
+  margin: 0;
+}
+
+/* Стили для иконок блока service */
+.service-element i{
+  font-size: 40px;
+  color: rgb(57, 147, 208);
+  display: block;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover .service-element i {
+  transform: translateY(2px);
+}
+
+/* Блок с Clients  */
+/* Фоновая обёртка блока Клиентов */
+.bg-color-sky-light {
+  padding: 40px 0;
+}
+
+/* Сетка клиентов: 4 колонки, автоматически 2 ряда при 8 элементах */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin-bottom: 100px;
+}
+
+/* Стили для каждого "куба" */
+.client-cube {
+  background-color: #f4f4f4;           /* Тонкий едва заметный серый фон */
+  padding: 20px;                       /* Отступы для отодвигания контента от краёв */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  min-height: 140px;                   /* Сделать куб чуть выше */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* pointer-events: none;*/
+  cursor: default;
+}
+
+/* Эффект при наведении */
+.client-cube:hover {
+  transform: translateY(-3px);
+  background-color: #114161;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  fill: #ccc;
+}
+
+/* Стили для изображений внутри "куба" */
+.client-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Стили для Promo Section */
+
+/* Общий стиль для Promo Section */
+.promo-section {
+  margin: 10px 0 10px 0;
+  position: relative;
+  height: 100%;
+}
+
+
+/* Flex-обёртка для текста и картинки */
+.promo-content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Текстовый блок (левая колонка) */
+.promo-section-col {
+  flex: 1 1 55%;
+  padding: 20px;
+}
+
+/* Стили заголовков и абзацев внутри текстового блока */
+.promo-section-col h2 {
+  font-size: 28px;
+  color: #424242; 
+  margin-bottom: 10px;
+}
+
+.promo-section-col p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Блок с изображением (правая колонка) */
+.promo-section-img-right {
+  flex: 1 1 40%;
+  padding: 20px;
+  text-align: right; /* выравнивание изображения по правому краю */
+}
+
+/* Изображение внутри блока */
+.promo-section-img-right img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  height: 100%;
+  width: 400px;
+  margin-bottom: 50px;
+}
+
+.promo-section-col-link{
+  font-size: 18px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.promo-section-col-link a{
+  font-size: 20px;
+  color: var(--link-color);
+}
+.promo-section-col-link a:hover{color: var(--link-color-hover);}
+
+
+/* Основной стиль футера */
+
+
+.footer {
+  background-color: #393b3c;  /* Темный фон для футера */
+  color: #ccc;             /* Светлый текст в футере */
+  padding: 40px 0;
+  font-family: 'Hind', sans-serif;
+}
+
+/* Ссылки футера */
+.footer a {
+  color: #00bed7;  /* Фирменный синий для ссылок */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #fff;  /* При наведении ссылки становятся белыми */
+}
+
+/* Разделитель внутри футера */
+.footer-seperator {
+  border-bottom: 1px solid #444;  /* Легкая граница снизу */
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+/* Списки в футере (навигация и соцсети) */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-list-item {
+  margin-bottom: 10px;
+}
+
+/* Стилизация заголовков внутри футера */
+.footer h2,
+.footer h3 {
+  font-size: 24px;       /* Немного уменьшенный размер для гармоничного вида */
+  margin-bottom: 20px;
+  color: #fff;
+}
+.footer h2 {
+  color: #00bed7;   /* Используем фирменный цвет для одного из заголовков */
+}
+.footer h2.color-white {
+  color: #fff;      /* Если явно указан класс color-white */
+}
+
+/* Стилизация формы */
+.footer input.form-control,
+.footer textarea.form-control {
+  background-color: #505355;  /* Темный фон полей */
+  border: 1px solid #444;
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+}
+.footer input::placeholder,
+.footer textarea::placeholder {
+  color: #ffffff;
+}
+
+/* Кнопка отправки */
+.footer button.btn-theme {
+  background-color: #00bed7;  /* Фирменный синий фон для кнопки */
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.footer button.btn-theme:hover {
+  background-color: #0098b6;
+}
+
+/* Выравнивание изображения или логотипа в правой части футера (если требуется) */
+.footer .text-center {
+  text-align: center;
+}
+
+/* Дополнительные стили для копирайта */
+.footer p.margin-b-0 {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+/* Стили для контактной информации */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact-item {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #cef7ff;
+}
+
+
+.footer-contact-item i {
+  color: #00bed7;    /* Фирменный цвет для иконок */
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Кнопка отправки */
+.btn-theme {
+  background-color: #00bed7;  /* Фирменный синий */
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif !important; /* новый шрифт */
+}
+.btn-theme:hover {
+  background-color: #0098b6;
+}
+
+/* Низ футера: копирайт */
+.footer-bottom {
+  padding: 20px 0 !important;       
+  font-size: 14px;
+  color: #999;
+}
+
+/* Дополнительная кнопка "Связаться с нами" */
+.btn-contact {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+}
+
+/* Отступ для правой колонки контактов */
+.contact-wrapper {
+  padding-left: 100px; /* отступ для выравнивания */
+}
+
+/* стили для footer */
+.footer {
+    background-color: #393b3c;  /* Темный фон для футера */
+    color: #ccc;             /* Светлый текст в футере */
+    padding: 40px 0;
+    font-family: 'Hind', sans-serif;
+  }
+
+  /* Ссылки футера */
+  .footer a {
+    color: #00bed7;  /* Фирменный синий для ссылок */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer a:hover {
+    color: #fff;  /* При наведении ссылки становятся белыми */
+  }
+
+  /* Разделитель внутри футера */
+  .footer-seperator {
+    border-bottom: 1px solid #444;  /* Легкая граница снизу */
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+
+  /* Списки в футере (навигация и соцсети) */
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-list-item {
+    margin-bottom: 10px;
+  }
+
+  /* Стилизация заголовков внутри футера */
+  .footer h2,
+  .footer h3 {
+    font-size: 24px;       /* Немного уменьшенный размер для гармоничного вида */
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .footer h2 {
+    color: #00bed7;   /* Используем фирменный цвет для одного из заголовков */
+  }
+  .footer h2.color-white {
+    color: #fff;      /* Если явно указан класс color-white */
+  }
+
+  /* Стилизация формы */
+  .footer input.form-control,
+  .footer textarea.form-control {
+    background-color: #505355;  /* Темный фон полей */
+    border: 1px solid #444;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    resize: none;
+    font-size: 16px;
+  }
+  
+.footer input.form-control{
+  height: 50px;
+}
+
+  .footer input::placeholder,
+  .footer textarea::placeholder {
+    color: #ffffff8a;
+  }
+  /* Кнопка отправки */
+  .footer button.btn-theme {
+    background-color: #00bed7;  /* Фирменный синий фон для кнопки */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .footer button.btn-theme:hover {
+    background-color: #0098b6;
+  }
+
+  /* Выравнивание изображения или логотипа в правой части футера (если требуется) */
+  .footer .text-center {
+    text-align: center;
+  }
+
+  /* Дополнительные стили для копирайта */
+  .footer p.margin-b-0 {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  /* Стили для контактной информации */
+  .footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-contact-item {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #cef7ff;
+  }
+
+
+  .footer-contact-item i {
+    color: #00bed7;    /* Фирменный цвет для иконок */
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  /* Низ футера: копирайт */
+  .footer-bottom {
+    padding: 20px 0 !important;       
+    font-size: 14px;
+    color: #999;
+  }
+
+  .success-message {
+    color: green;
+    margin-top: 20px;
+  }
+  .error-message {
+    color: red;
+    margin-top: 20px;
+  }
+
+
+/* Сдесь стили с страницы Рынки и предложение */
+/* сдесь стили для parallax */
+.custom-header {
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 30px; 
+  color: #ffffff;    
+}
+
+/* Новый стиль для абзаца p */
+.custom-paragraph {
+  font-family: var(--font-roboto);    
+  font-weight: normal; 
+  font-size: 15px;
+  color: rgb(234, 234, 234);
+}
+
+
+/* сдесь стили для тело */
+/* Контейнер карточек: 4 карточки в ряду */
+.body-card{
+  background-color: #ecececd2;
+  padding: 40px 0;
+}
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;   /* уменьшенный отступ между карточками */
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+    
+    /* Стиль карточки – немного меньшие по высоте */
+  .card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 360px;      /* уменьшенная высота */
+    background-size: cover;
+    background-position: center;
+    /* Используем flex для центрирования содержимого */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid #a2a2a2;
+    margin: 10px 0;
+  }
+    
+  .card:hover {
+    transform: translateY(-5px);
+  }
+    
+  /* Контент карточки – выровнен по центру */
+  .card-content {
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+  }
+    
+  /* Выравнивание иконки и заголовка на одной строке */
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin:15px 0;
+  }
+    
+  .card-header i {
+    font-size: 40px;
+    color: #ececec;
+    margin-right: 10px ;
+    margin-left: 15px;
+  }
+    
+
+  .card-header h3 {
+    font-size: 18px;
+    color: #f1f1f1;
+    margin: 10px 0;
+  }
+    
+.bisnes-position{margin-right: 60px !important;}
+.school-position{margin-right: 70px !important;}
+.health-position{margin-right: 50px !important;}
+.card-position{margin-right: 80px !important;}
+.cards-position{margin-right: 40px !important;}
+
+
+  .card-description {
+    color: #e1e1e1e7;
+    flex: 1;
+    padding: 10px ;
+    font-size: 15px;
+    margin: 10px 0;
+  }
+    
+  .card-button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px; /* отступ снизу для кнопки */
+  }
+
+  .card-link {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+    
+  .card-link:hover {
+    background-color: #2980b9;
+    color: #15151583;
+  }
+    
+    /* Фоновые изображения карточек, определяемые через CSS для каждого уникального класса */
+    .card-bg1 { background-image: url('/static/img/sliders/Header1.jpg'); }
+    .card-bg2 { background-image: url('/static/img/sliders/Header2.jpg'); }
+    .card-bg3 { background-image: url('/static/img/sliders/Header3.jpg'); }
+    .card-bg4 { background-image: url('/static/img/sliders/Header4.jpg'); }
+    .card-bg5 { background-image: url('/static/img/sliders/Header5.jpg'); }
+    .card-bg6 { background-image: url('/static/img/sliders/Head6.jpg'); }
+    .card-bg7 { background-image: url('/static/img/sliders/Header7.jpg'); }
+    .card-bg8 { background-image: url('/static/img/sliders/Header8.png'); }
+    
+    /* Адаптивность: */
+    @media (max-width: 1024px) {
+      .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .cards-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+/* Стили страницы Наши решения */
+/* Стили Паралакс */
+.parallax-printer{ 
+  position: relative;
+}
+.parallax-printer::before{
+  background-image: url('/static/img/sliders/original-125h.jpeg');
+  background-size: cover;
+  filter: brightness(35%);
+  background-size: cover;
+  background-position: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.custom-paragraph-products{
+  color: #fff;
+}
+
+
+/* Стили для блоков в теле */
+/* Контейнер страницы */
+  .container-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .container-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .container-3{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+    /* Главный заголовок над блоками */
+    .main-heading {
+      font-size: 40px;        
+      margin: 100px 0 50px 10px; 
+      text-align: left;
+      color: #333;
+      font-family: 'Roboto', sans-serif;
+    }
+   
+    .main-heading-consumables{
+      margin-top: 10px !important;
+    }
+
+    .grid-container {
+      width: 100%; 
+      margin: 0 auto 100px auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px; 
+    }
+    /* Базовый стиль блока */
+    .block {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 20px; 
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover-эффект: блок немного поднимается и появляется тень */
+    .block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    /* Стили для изображения внутри блока */
+    .block img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px; 
+    }
+
+
+.badgy{margin: 20px auto 30px auto !important;}
+.primacy{
+  margin: 15px auto 20px auto !important;
+  width: 100% !important;
+}
+.zenius{
+  width: 80% !important;
+  margin: -50px auto -20px auto !important;
+}
+.futronic{
+  margin: 5px auto 10px auto !important;
+  width: 80% !important;
+}
+
+
+    /* Заголовок блока */
+    .block h3 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 22px;
+      margin: 10px 0 10px 0;
+      color: #222;
+    }
+    /* Описание блока */
+    .block p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight:200;
+      margin-bottom: 15px;
+      color: #626262;
+      flex-grow: 1; 
+    }
+    /* Кнопка-ссылка внизу блока */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--link-color);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 16px;
+      align-self: flex-start;  
+      margin-top: 10px;
+    }
+
+    .btn:hover{
+      background: var(--link-color-hover);
+      color: #fff;
+    }
+    .btn-products{
+      font-family: var(--font-roboto);
+      font-weight: normal;
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--link-color);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 16px;
+      align-self: flex-start;  
+      margin-top: 10px;
+      border: var(--link-color) 2px solid ;
+    }
+
+    .btn-products:hover{
+    transform: scale(1.05);
+    transition: all 0.4s ease;
+    border: var(--link-color-hover) 2px solid;
+    background-color: #ffffff;
+    color: #2a2a2a;
+    }
+    /* Адаптивность: для экранов менее 768px отвечаем за макет */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr; /* Один блок в ряду */
+        width: calc(100% - 40px);  /* уменьшаем боковые отступы */
+        margin-left: 20px;
+      }
+      .main-heading {
+        margin-left: 20px;  /* корректировка отступа заголовка на мобильных */
+        font-size: 28px;
+      }
+    }
+  
+
+/* Стили для О нас */
+.parallax-company{
+  position: relative;
+}
+
+.parallax-company::before{
+  background-image: url('/static/img/sliders/ofis_stoly.jpg');
+  background-size: cover;
+  filter: brightness(35%);
+  background-size: cover;
+  background-position: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.parallax-company-text h1{
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+}
+
+.parallax-company-text p{
+font-family: var(--font-roboto);    
+  font-weight: normal; 
+  font-size: 15px;
+  color: rgb(234, 234, 234)
+}
+
+
+.container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+.container h3{
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+.container p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+}
+
+
+    /* =======================================
+       Стили первого блока (информация о компании)
+       ======================================= */
+    .company-block1 {
+      margin-bottom: 40px;
+      margin-top: 100px;
+    }
+    /* Заголовки первого блока (два h3) */
+    .company-block1 .company-h3-first,
+    .company-block1 .company-h3-second {
+      /* Можно изменить размер шрифта, межстрочное расстояние и отступы */
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #333;
+      text-align: left;
+    }
+    
+    /* =======================================
+       Стили второго блока (направления деятельности)
+       ======================================= */
+    .company-block2 {
+      margin-bottom: 40px;
+    }
+    /* Заголовок второго блока */
+    .company-block2 .company-main-heading {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: left;
+      color: #333;
+    }
+    
+    /* Контейнер мини-блоков для иконок */
+    .company-mini-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    /* Каждый мини-блок */
+    .company-mini-block {
+      flex: 1; /* мини-блоки будут равной ширины */
+      padding: 15px;
+      text-align: center;
+    }
+    /* Стили для иконок внутри мини-блока */
+    .company-icon  {
+      font-size: 45px;    
+      height: auto;
+      margin-bottom: 10px;
+      color: rgb(53, 136, 191);
+      margin: 10px 5px;
+    }
+    /* Описание под иконкой в мини-блоке */
+    .company-mini-description {
+      font-size: 15px;
+      color: #333;
+    }
+    /* Дополнительное описание под мини-блоками */
+    .company-additional-description {
+      font-size: 18px;
+      color: #555;
+      text-align: left;
+      margin-bottom: 100px;
+    }
+    
+    /* =======================================
+       Адаптивность (media query)
+       ======================================= */
+    @media (max-width: 768px) {
+      .company-main-heading {
+        margin-left: 20px;
+        font-size: 20px;
+      }
+      .company-mini-grid {
+        flex-direction: column;
+      }
+      .company-mini-block {
+        margin-bottom: 20px;
+      }
+    }
+
+
+/* Дальше стили для станицы о компании. */
+.back-company{background-color: #fff;}
+
+
+.b1-block,
+.b2-block,
+.b3-block,
+.b4-block,
+.b5-block,
+.b6-block
+{
+  width: calc(100% - 300px);
+  margin: 0 auto; /* Центрирование блока по горизонтали */
+}
+
+/* Контейнер первого блока */
+.b1-block {
+  padding: 10px;
+  /* Можно задать фон, если нужно */
+}
+
+/* Ряды приложений, равномерно распределены */
+.b1-app-row {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  gap: 30px;
+}
+
+/* Каждый элемент-приложение */
+.b1-app-item {
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  padding: 30px 0px;
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+}
+
+.b1-app-item:first-child{
+  color: #444242e8 ;
+}
+
+/* Нижняя полоса: цвет и толщина на всю ширину блока */
+.b1-footer {
+  align-items: center;
+  width: 92%;
+  height: 1px;              /* Толщина полосы */
+  background-color: #ccccccd5;   /* Серый цвет */
+  margin-top: 10px;
+}
+
+
+/* Второй блок */
+/* Общий стиль для второго блока */
+.b2-block {
+  padding: 20px;
+  background: #fff;
+}
+
+/* Контейнер мини-блоков – располагаем мини-блоки по вертикали */
+.b2-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+
+/* Заголовок внутри мини-блока: иконка и заголовок в одной строке */
+.b2-feature-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+/* Иконка для мини-блоков */
+.b2-feature-icon {
+  font-size: 44px; 
+  color: rgb(53, 136, 191);
+  min-width: 50px;
+  margin: 0 0 10px 5px;
+}
+
+/* Заголовок мини-блока */
+.b2-feature-title {
+  font-size: 28px;
+  margin: 0;
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  margin: 0 0 10px 10px;
+  color: #000;
+}
+
+.b2-feature-title:first-child{
+margin: 0px;
+margin-bottom: 10px; 
+}
+
+/* Описание мини-блока */
+.b2-feature-desc {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 17px;
+  margin: 0 0 20px 0;
+  color: #000000af;
+}
+
+/* Стиль для одного изображения внизу блока */
+.b2-single-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.b2-img {
+  max-width: 100%;
+  height: auto;
+  border: 0px solid #ddd;
+  margin: 30px 0;
+}
+
+
+
+/* Третий блок */
+/* Контейнер блока 3 с серым фоном */
+.b3-back{
+  background-color: #424158;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.b3-block {
+  padding: 20px;
+}
+
+/* Заголовки внутри блока 3 */
+.b3-heading {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Текстовые абзацы внутри блока 3 */
+.b3-text {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 17px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #e0e0e0;
+  line-height: 1.4;
+}
+
+
+/* блок 4 */
+/* Контейнер блока 4 */
+.b4-block {
+  padding: 20px;
+}
+
+/* Заголовки и описание */
+.b4-heading {
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: #1d1d1deb;
+  margin-top: 50px;
+}
+.b4-subheading {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align:  left;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  color: #333;
+}
+.b4-description {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 40px;
+  text-align: left;
+  color: #555;
+}
+
+/* Контейнер для элементов — вертикальное расположение с отступом 10px между элементами */
+.b4-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Каждый элемент списка: круг слева и текст справа */
+.b4-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+
+}
+
+.b4-item-left{
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  border: 3px solid rgb(55, 137, 192);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Круг с фоном и числом */
+.b4-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: rgb(53, 136, 191); /* фоновый цвет круга */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+/* Правая часть элемента */
+.b4-item-right {
+  flex: 1;
+}
+.b4-item-heading {
+  font-size: 20px;
+  margin: 0;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: #000000bb;
+}
+.b4-item-text {
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0;
+  color: #00000097;
+}
+
+/* Дополнительный текст внизу блока */
+.b4-additional-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 20px;
+  text-align: left;
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+/* блок 5*/
+
+
+.b5-back-second{
+  background-color: #424158;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+}
+/* Общий блок 5 с фоновым цветом, как у блока 3 (например, серым) */
+.b5-block {
+  padding: 20px;
+}
+
+.b5-content {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  margin: 130px auto;
+}
+
+/* Левый столбец: фото */
+.b5-left {
+  flex: 1;
+  padding-left: 40px;
+}
+.b5-photo {
+  width: 420px;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* Правый столбец: текстовый контент */
+.b5-right {
+  flex: 2;
+}
+.b5-heading {
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.b5-text {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* Мини-элементы блока 5 */
+.b5-mini-item {
+  margin-bottom: 15px;
+}
+/* Изменяем способ расположения: соединим мини заголовок и иконку в один небольшой блок без растяжения */
+.b5-mini-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  /* Убираем justify-content: space-between, чтобы элементы были рядом */
+}
+.b5-mini-heading {
+  font-size: 20px;
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  color: #fff;
+}
+.b5-mini-icon {
+  font-size: 38px;
+  color: rgb(53, 136, 191);
+  margin: 2px 5px;
+}
+.b5-mini-desc {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
+  margin: 5px 0 0 0;
+  color: #ffffffd4;
+}
+
+/* блок 6 */
+
+/* Контейнер блока 6 */
+.b6-block {
+  padding: 20px;
+}
+
+/* Верхняя часть блока 6 */
+.b6-main-heading {
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 30px;
+  text-align: left;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  color: #000000d8;
+}
+.b6-main-text {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Подзаголовки для каждой группы */
+.b6-subheading {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 22px;
+  text-align: left;
+  margin: 50px 0 30px 10px;
+  color: #333;
+}
+
+/* Сетка мини-блоков: три столбца */
+.b6-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+/* Каждый мини-блок (без бордера) */
+.b6-item {
+  padding: 10px;
+}
+
+/* Верхняя линия мини-блока: текст слева, иконка справа */
+.b6-item-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.b6-item-title {
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+  flex: 1;
+  color: #000000;
+}
+.b6-item-icon {
+  font-size: 50px;
+  color: rgb(53, 136, 191);
+  margin-left: 5px;
+}
+
+/* Описание мини-блока */
+.b6-item-text {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
+  margin-top: 5px;
+  color: #1c1c1c;
+  line-height: 1.8;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 768px) {
+  .b1-apps {
+    flex-direction: column;
+  }
+  .b1-item {
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .b2-heading {
+    font-size: 24px;
+  }
+  .b2-text {
+    font-size: 14px;
+  }
+  .b2-feature-icon {
+    font-size: 32px;
+    min-width: 40px;
+  }
+  .b2-feature-title {
+    font-size: 18px;
+  }
+  .b2-feature-desc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .b3-heading {
+    font-size: 20px;
+  }
+  .b3-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .b4-heading { font-size: 24px; }
+  .b4-subheading { font-size: 20px; }
+  .b4-description { font-size: 14px; }
+  .b4-item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .b4-circle {
+    margin-bottom: 5px;
+  }
+  .b4-item-right {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .b5-content {
+    flex-direction: column;
+  }
+  .b5-heading {
+    font-size: 24px;
+  }
+  .b5-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .b6-main-heading {
+    font-size: 24px;
+  }
+  .b6-main-text {
+    font-size: 14px;
+  }
+  .b6-subheading {
+    font-size: 18px;
+  }
+  .b6-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* стили для страницы образование */
+
+.np-block1,
+.np-block2{
+  width: calc(100% - 300px);
+  margin: 0 auto; /* Центрирование блока по горизонтали */
+}
+
+/* Стили для блока 2 */
+.np-block1 {
+  padding: 20px;
+  margin: 40px auto;
+}
+.np-block1-heading {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 34px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.np-block1-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.np-block1-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.np-block1-left p{
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  color: #706d6d;
+  font-size: 16px;
+  margin: auto 20px;
+}
+
+.np-block1-right {
+  flex: 1;
+}
+.np-block1-image {
+  max-width: 520px;
+  border-radius: 6px;
+  height: auto;
+  display: block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .np-block1-content {
+    flex-direction: column;
+  }
+}
+
+
+/* Стили для блока 3 */
+.np-block2 {
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.np-block2-mt{margin-top: 80px;}
+
+.np-block2-heading {
+  font-family: var(--font-roboto);
+  font-weight: 600;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+.np-block2-text {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #706d6d;
+}
+
+.np-block2-text-mb{margin-bottom: 100px;}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .np-block2-heading {
+    font-size: 28px;
+  }
+  .np-block2-text {
+    font-size: 16px;
+  }
+}
+
+/* Стили для блока 4 */
+.np-block3-list {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+.np-block3-list li {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
+  margin: 20px 10px 20px 10px;
+  color: #fff;
+}
+
+@media (max-width: 768px){
+  .np-block3-list li{font-size: 14px;}
+}
+
+/* стили для блока 5 */
+.np-block3-custom-list {
+  list-style: none;
+  padding-left: 20px;
+}
+.np-block3-custom-list li {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+.np-block3-custom-list li:first-child::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  padding-left: 5px ;
+}
+.np-block3-custom-list li:not(:first-child)::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px){.np-block3-custom-list li {font-size: 14px;}}
+
+/*  Страница Розничная торговля */
+
+/* Общие стили для обоих блоков */
+.np2-block {
+  padding: 20px;
+  margin-bottom: 30px;
+  background: #fff;
+  width: calc(100% - 300px);
+  margin: 0 auto; /* Центрирование блока по горизонтали */
+}
+
+.np2-block-mt{margin-top: 50px;}
+.np2-block-pb{padding-bottom: 100px;}
+
+.np2-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Картинка — ограничиваем ширину и делаем адаптивной */
+.np2-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 40px;
+}
+
+/* Текстовый блок */
+.np2-text {
+  flex: 1;
+}
+
+.np2-title {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #2b2b2bda;
+}
+
+.np2-description {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 18px; 
+  color: #555;
+}
+
+/* Для блока 2 — меняем направление элементов */
+.np2-content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Адаптивность: на экранах меньше 768px выстраиваем элементы в колонку */
+@media (max-width: 768px) {
+  .np2-content {
+    flex-direction: column;
+  }
+}
+
+/* Сайт Платежные карты */
+
+.b1-block-left{
+  justify-content: left !important;
+  margin-left: 50px;
+}
+
+.np-block3-list-col li{
+  font-size: 16px !important;
+  margin: 0 0 20px 0 !important;
+  color: #000000af !important;
+}
+
+
+.b-payCard-back-igm{
+  margin-top: 100px ;
+  background-color: #000;
+  background-image: url('/static/img/bankomat.jpeg');
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;    
+  width: 100vw;         
+  height: 60vh; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.np-block2-payCard {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.b3-block-payCard{
+  background-color: #424158;
+  margin-top: 100px;
+  padding: 70px 100px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+}
+
+
+/* Стили для страницы Государственные органы */
+.b5-mini-heading-state{
+  font-size: 24px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: #fff;
+}
+
+.b3-back-state{
+  background-color: #424158;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.b5-heading-state{
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.b5-text-state{
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 18px;
+  margin: 15px 0;
+  color: #000000;
+}
+.b5-mini-headin-state{
+  font-size: 16px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.b5-photo-state{
+  width: 480px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.b5-mini-icon-state{
+  font-size: 38px;
+  color: rgb(53, 136, 191);
+  margin: 5px;
+}
+.b3-backgr-state{
+  background-color: #F9F9F9;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.b3-heading-state{
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #000;
+}
+.b3-text-state{
+  color: #3e3e3e;
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 17px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  line-height: 1.4;
+}
+.b-state-backm{
+  width: calc(100% - 300px);
+  margin-left: 50vw;
+}
+.b3-block-state{
+  width: calc(100% - 300px);
+  margin: 0 auto;
+  background-color: #fff;
+}
+.b3-back-state-second{
+  background-color: #424158;
+  margin: 80px 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 100%;
+}
+
+
+/* Сдесь стили сайта Здравоохранение */
+/* Сброс отступов базового уровня, если нужно */
+
+/* Основной контейнер блока */
+.np-block {
+  width: calc(100% - 300px);
+  padding: 20px;
+  margin: 20px auto;
+}
+
+/* Вводный текст */
+.np-intro {
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 40px;
+  color: #2b2b2b;
+}
+
+/* Основной контейнер с двумя колонками */
+.np-main-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Левая колонка */
+.np-left {
+  flex: 1;
+}
+
+/* Заголовок левой колонки */
+.np-left-header {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* Стили для списка */
+.np-left-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+/* Элементы списка с иконкой-кругом */
+.np-left-list li {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px; 
+  color: #000;
+}
+
+/* Псевдоэлемент для синего круглого маркера */
+.np-left-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 19px;
+  height: 19px;
+  background-color: rgb(53, 136, 191);  
+  border-radius: 50%;
+}
+
+/* Правая колонка с изображением */
+.np-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.np-image {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Нижние тексты блока */
+.np-bottom-text p {
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  font-size: 17px;
+  text-align: left;
+  margin: 8px 0 50px 0;
+  color: #000;
+}
+
+/* Адаптивность: при узком экране колонки выстраиваются в один столбец */
+@media (max-width: 768px) {
+  .np-main-content {
+    flex-direction: column;
+  }
+}
+
+
+/* стили для страницы Транспорт */
+.b5-photo-trns{
+  width: 420px;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.np-block3-trns li{
+  font-family: var(--font-roboto);
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 16px ;
+  color: #000000 ;
+}
+
+.np-block3-trns-second{
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  font-size: 15px;
+  color: #000;
+  margin: 10px 0 0 40px;
+  padding: 5px 0;
+}
+
+.b5-content-trns{
+    display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  margin: 20px auto 50px;
+}
+
+.b5-mini-headin-trns{
+  font-size: 16px;
+  font-family: var(--font-montserrat);
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.trns-mb{margin-bottom: 50px;}
+
+/* Дальше будут стили из папки offers */
+/* Стили для Agilia */
+
+/* Основной блок */
+
+.full-width-banner {
+  width: 100%;               /* Занимает всю ширину экрана */
+  height: 95px;              /* Здесь можете задать любую высоту */
+  background-color: #032341;    /* Тёмный фон. Можно изменить по желанию */
+}
+
+
+
+.nb-block {
+  margin: 100px auto 50px;
+  padding: 20px;
+  background: #fff;
+  max-width: 1200px;
+  border-bottom: #8989895a 1px solid;
+}
+
+/* Контейнер блока – две колонки */
+.nb-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Левая колонка: слайдер и миниатюры */
+.nb-left {
+  flex: 1;
+}
+.nb-slider {
+  position: relative;
+  overflow: hidden; 
+  width: 540px;
+  height: 590px;
+  background-color: #f1f1f17a;
+  border-radius: 12px;
+}
+
+#nbMainImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;           
+  object-fit: contain;  
+  background: transparent;
+  mix-blend-mode: multiply;  
+}
+.nb-main-image {
+  display: block;
+  border-radius: 10px;
+}
+.nb-thumbnails {
+  display: flex;
+  gap: 10px;
+}
+.nb-thumb-wrapper{
+  width: 95px;
+  height: 95px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 5px 0 0;
+  transition: border-color 0.3s;
+  margin-top: 10px;
+  border: 2px #dbdbdb solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nb-thumb {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.nb-thumb-wrapper:hover {
+  transform: translateY(-3px);
+  border: #515151c0 3px solid;
+}
+
+/* Правая колонка: текст, список, ссылка и кнопки */
+.nb-right {
+  flex: 1;
+}
+.nb-title {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.nb-text {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #555;
+}
+.nb-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.nb-list ul.no-bullets {
+  list-style: none; /* удаляет маркеры */
+  margin: 0;
+  padding: 0;
+}
+
+.nb-list li {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #333333;
+}
+
+.no-bullets li{
+  margin-top: 5px;
+  padding-left: 20px;
+  position: relative;
+  list-style: none;
+}
+
+.no-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 8px;   /* уменьшенный размер, например, 10px вместо 15px */
+  height: 8px;
+  margin-bottom: 10px;
+  background-color: rgb(53, 141, 200);
+  border-radius: 50%;
+}
+
+.nb-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: rgb(59, 161, 228);
+  border-radius: 50%;
+}
+
+.nb-list ul li::before {
+  content: none;
+}
+
+/* Ссылка для скачивания драйверов */
+.nb-download-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  color: #007BFF;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease
+}
+.nb-download-link:hover{
+  color: #004b9b;
+}
+
+.nb-download-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background-color: rgb(59, 161, 228);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  margin: 10px 8px 10px 0;
+}
+
+/* Кнопки */
+.nb-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.nb-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 6px;
+}
+.nb-btn-buy {
+  border: 2px solid #1888ff;
+  background-color: #1888ff;
+  color: #fff;
+}
+.nb-btn-buy:hover{
+  transform: scale(1.05);
+  transition: all 0.4s ease;
+  border: 2px solid #1888ff;
+  background-color: #ffffff;
+  color: #2a2a2a;
+}
+
+.nb-btn-brochure {
+  border: 2px solid #919191;
+  background-color: #919191;
+  color: #ffffff !important;
+}
+
+.nb-btn-brochure:hover{
+  transform: scale(1.05);
+  transition: all 0.4s ease;
+  border: 2px solid #919191;
+  background-color: #ffffff;
+  color: #2a2a2a !important;
+}
+
+/* Адаптивность: на узких экранах колонки выстраиваются в столбик */
+@media (max-width: 768px) {
+  .nb-container {
+    flex-direction: column;
+  }
+  .nb-thumb {
+    width: 80px;
+  }
+  .nb-title {
+    font-size: 24px;
+  }
+  .nb-text,
+  .nb-list li,
+  .nb-download-link {
+    font-size: 14px;
+  }
+  .nb-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* следующий блок */
+/* Контейнер всего блока */
+.tab-container {
+  max-width: 1200px;
+  margin: 50px auto; /* Вы можете настроить верхний отступ по необходимости */
+  padding: 0 20px;
+}
+
+/* Заголовки переключателей */
+.tab-headers {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tab-header {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  flex: 1;          
+  text-align: center;
+  padding: 10px 0;       
+  font-size: 21px;
+  font-weight: bold;
+  color: #1e1e1e;           
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Убираем лишние отступы, чтобы заголовки были ровно поделены */
+.tab-header:not(:last-child) { margin-right: 20px; }
+
+/* Псевдоэлемент для нижней анимированной линии с вертикальной анимацией */
+.tab-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px; 
+  transform: scaleY(2); 
+  transform-origin: bottom; 
+  background-color: #0077ff;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in 0.2s, height 0.2s ease-in;
+}
+
+/* Активная вкладка: меняем цвет текста */
+.tab-header.active {
+  color: #0077ff;
+}
+
+/* Активное состояние: линия раскручивается сверху вниз и утолщается */
+.tab-header.active::after {
+  transform: scaleY(1);
+  height: 4px;
+  transition: transform 0.4s ease-out, height 0.2s ease-out 0.2s;
+}
+
+
+
+/* Контейнер вкладок */
+.tab-content {
+  position: relative;
+}
+
+/* Скрываем все вкладки по умолчанию */
+.tab-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Активная вкладка отображается */
+.tab-panel.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Респонсивное видео (вкладка "Обзор") */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 54%; 
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  border-radius: 50px;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Контейнер карточек для "Расходных материалов" */
+.card-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+/* Карточки – их размеры можно подправить по необходимости */
+.card-products-block {
+  display: flex;
+  flex-direction: column;
+  background: #f1f1f17a;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  min-height: 400px;
+  border-radius: 15px;
+  /* transition: border-color 0.3s ease; */
+}
+
+.card-products-block img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Опционально: эффект при наведении на карточку */
+.card-products-block:hover {
+  transform: translateY(-5px);
+}
+.card-products-block h3{
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+  color: #000;
+  font-size: 20px;
+}
+
+
+.card-products-block p {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  flex-grow: 1;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #000000;
+}
+
+.download-link {
+  font-family: var(--font-montserrat);
+  margin-top: auto;
+  text-decoration: underline; 
+  text-decoration-thickness: 1px;  
+  text-underline-offset: 2px;  
+  color: #0077ff; 
+  font-weight: bold;
+  display: inline-block;
+  padding-top: 10px;
+  font-size: 18px;
+  text-decoration: none; 
+  position: relative;  
+}
+
+
+.download-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; 
+  width: 85%;
+  height: 2px;           
+  background-color: #0077ff;
+  transform: scaleX(0);  
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.download-link:hover{
+  color: #005eca;
+}
+
+.download-link:hover::after {
+  transform: scaleX(1);  
+}
+
+
+.extra-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px 0 100px 0;
+}
+
+
+/* Оформление дополнительных блоков аналогично карточкам */
+.extra-block {
+  border: 1px solid #f1f1f13b;
+  border-radius: 20px;
+  background: #f1f1f128;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px; 
+  transition: transform 0.3s ease;
+}
+
+.extra-block:hover{ transform: translateY(-5px);}
+
+/* Стили для изображений дополнительных блоков */
+.extra-block img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.primacy-product{
+  margin: 15px auto 20px auto !important;
+  max-width: 110% !important;
+}
+
+/* Заголовки и описание для доп. блоков */
+.extra-block h3 {
+  font-family: var(--font-montserrat);
+  font-weight: bold;
+  font-size: 22px;
+  margin: 10px 0;
+  font-size: 20px;
+  color: #000000;
+}
+
+.extra-block p {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  flex-grow: 1;
+  font-size: 16px;
+  color: #000000;
+}
+
+.section-title {
+  font-family: var(--font-montserrat);
+  font-weight: bold;
+  text-align: left;
+  font-size: 30px;
+  color: #000000;
+  margin: 40px 0 20px; 
+}
+
+/* Стили для 6 блоков */
+/* Обертка для всех инфоблоков */
+.info-blocks {
+  margin-top: 80px;
+}
+
+/* Стили для самого блока */
+.info-block {
+  margin-bottom: 30px;
+  padding: 12px 18px;
+}
+
+/* Верхняя строка блока: иконка и мини заголовок */
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+/* Иконка */
+.info-icon {
+  display: inline-block;
+  font-size: 50px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px; 
+  color: #0077ff; 
+  margin-bottom: 15px;
+  margin-right: 5px;
+}
+
+/* Мини заголовок */
+.info-title {
+  font-family: var(--font-montserrat);
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Описание блока */
+.info-description p {
+  padding-bottom: 10px;
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  margin: 0;
+  font-size: 16px;
+  color: #090909;
+}
+
+
+.info-description p > a{color: #007BFF;}
+.info-description p > a:hover{color: #004b9b;}
+
+/* Сброс стандартных маркеров и отступов для списков внутри .info-description */
+.info-description ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Стилизация элементов списка */
+.info-description li {
+  font-family: var(--font-roboto);
+  font-weight: normal;
+  position: relative;
+  margin-left: 20px;
+  padding-left: 25px; 
+  margin-bottom: 10px; 
+  line-height: 1.4;
+  color: #000 ;
+}
+
+/* Добавление кастомного маркера через псевдоэлемент */
+.info-description li::before {
+  content: "\2022"; 
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;  
+  color: #0077ff;   
+}
+
+.consumables-img{
+  border-radius: 50px;
+}
+
+/* Существующие адаптивные стили для переключателей */
+@media (max-width: 768px) {
+  /* Уменьшаем паддинги и размеры в контейнере вкладок */
+  .tab-container {
+    padding: 0 10px;
+    margin: 30px auto;
+  }
+  
+  .tab-headers {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .tab-header {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  
+  .tab-header:not(:last-child) {
+    margin-right: 0;
+  }
+  
+  /* Вкладка с видео обычно занимает всю ширину – оставляем без изменений */
+  
+  /* Адаптация карточек "Расходные материалы":
+     Изменяем сетку так, чтобы карточки выводились вертикально (1 колонка) */
+  .card-products {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Аналогично, если дополнительные блоки выводятся в виде сетки, делаем их в 1 колонку */
+  .extra-blocks {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Если хочется добавить отступы между карточками (уже задано через gap в grid, 
+     но можно добавить margin для .card-products-block, если требуется) */
+  .card-products-block {
+    margin-bottom: 20px;
+  }
+  
+  .card-products-block:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* При очень маленьких экранах можно дополнительно уменьшить размеры */
+@media (max-width: 480px) {
+  .tab-header {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  
+  /* Дополнительное уменьшение внутренних отступов для карточек и доп. блоков */
+  .card-products-block,
+  .extra-block {
+    padding: 15px;
+  }
+}
