@@ -1,0 +1,24 @@
+cat > .gitignore <<EOF
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.log
+*.sqlite3
+*.env
+
+# Django static and media
+staticfiles/
+media/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node/Vue (если используешь)
+node_modules/
+dist/
+EOF
